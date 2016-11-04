@@ -1,2 +1,10 @@
 # OpenGLES2Learning
-Just For Learning OpenGL ES 2 ~ ~ ~ 
+**Just For Learning OpenGL ES 2 ~ ~ ~ **
+
+### 01-DrawTriangle
+![](http://upload-images.jianshu.io/upload_images/1411747-3315abc33138706a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+#### 练练手
+![](http://upload-images.jianshu.io/upload_images/1411747-8b0ae6b8a78523f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://upload-images.jianshu.io/upload_images/1411747-696a86360a5a0874.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://upload-images.jianshu.io/upload_images/1411747-9ec94f202bfa9c64.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
