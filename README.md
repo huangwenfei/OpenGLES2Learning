@@ -1,5 +1,5 @@
 # OpenGLES2Learning
-**Just For Learning OpenGL ES 2 ~ ~ ~ **
+__ Just For Learning OpenGL ES 2 ~ ~ ~ __
 
 ### 01-DrawTriangle
 ![](http://upload-images.jianshu.io/upload_images/1411747-3315abc33138706a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
