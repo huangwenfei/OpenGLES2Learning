@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23BAAF9B1DD5D93C00F7F6AD /* DrawTriangle_FixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23BAAF9A1DD5D93C00F7F6AD /* DrawTriangle_FixTests.m */; };
+		23BEA9501DDAB82C00E1FA33 /* VFMatrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 23BEA94E1DDAB82C00E1FA33 /* VFMatrix.c */; };
+		23BEA9511DDAB82C00E1FA33 /* VFMatrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 23BEA94E1DDAB82C00E1FA33 /* VFMatrix.c */; };
+		23BEA9541DDAB84B00E1FA33 /* VFVector.c in Sources */ = {isa = PBXBuildFile; fileRef = 23BEA9521DDAB84B00E1FA33 /* VFVector.c */; };
+		23BEA9551DDAB84B00E1FA33 /* VFVector.c in Sources */ = {isa = PBXBuildFile; fileRef = 23BEA9521DDAB84B00E1FA33 /* VFVector.c */; };
+		23BEA9581DDAB86C00E1FA33 /* VFColor.c in Sources */ = {isa = PBXBuildFile; fileRef = 23BEA9561DDAB86C00E1FA33 /* VFColor.c */; };
+		23BEA9591DDAB86C00E1FA33 /* VFColor.c in Sources */ = {isa = PBXBuildFile; fileRef = 23BEA9561DDAB86C00E1FA33 /* VFColor.c */; };
+		23F77F2C1DD414D600C5E815 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F77F2B1DD414D600C5E815 /* main.m */; };
+		23F77F2F1DD414D600C5E815 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F77F2E1DD414D600C5E815 /* AppDelegate.m */; };
+		23F77F321DD414D600C5E815 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F77F311DD414D600C5E815 /* ViewController.m */; };
+		23F77F351DD414D600C5E815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F77F331DD414D600C5E815 /* Main.storyboard */; };
+		23F77F371DD414D600C5E815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F77F361DD414D600C5E815 /* Assets.xcassets */; };
+		23F77F3A1DD414D600C5E815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F77F381DD414D600C5E815 /* LaunchScreen.storyboard */; };
+		23F77F5A1DD4152500C5E815 /* VFVertexDatasManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F77F4A1DD4152500C5E815 /* VFVertexDatasManager.m */; };
+		23F77F5B1DD4152500C5E815 /* VFFrameBufferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F77F4E1DD4152500C5E815 /* VFFrameBufferManager.m */; };
+		23F77F5C1DD4152500C5E815 /* VFRenderBufferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F77F501DD4152500C5E815 /* VFRenderBufferManager.m */; };
+		23F77F5D1DD4152500C5E815 /* VFRenderContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F77F521DD4152500C5E815 /* VFRenderContext.m */; };
+		23F77F5E1DD4152500C5E815 /* VFRenderWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F77F541DD4152500C5E815 /* VFRenderWindow.m */; };
+		23F77F5F1DD4152500C5E815 /* VFFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 23F77F561DD4152500C5E815 /* VFFragmentShader.glsl */; };
+		23F77F601DD4152500C5E815 /* VFShaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F77F581DD4152500C5E815 /* VFShaderManager.m */; };
+		23F77F611DD4152500C5E815 /* VFVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 23F77F591DD4152500C5E815 /* VFVertexShader.glsl */; };
+		23F77F641DD416C600C5E815 /* VFShaderValueInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F77F631DD416C600C5E815 /* VFShaderValueInfo.m */; };
+		23F77F671DD44B7B00C5E815 /* VFShaderValueRexAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F77F661DD44B7B00C5E815 /* VFShaderValueRexAnalyzer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23BAAF9D1DD5D93C00F7F6AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23F77F1F1DD414D600C5E815 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23F77F261DD414D600C5E815;
+			remoteInfo = DrawTriangle_Fix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23BAAF931DD5BAF400F7F6AD /* VFShaderValueLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFShaderValueLocation.h; sourceTree = "<group>"; };
+		23BAAF981DD5D93C00F7F6AD /* DrawTriangle_FixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawTriangle_FixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23BAAF9A1DD5D93C00F7F6AD /* DrawTriangle_FixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawTriangle_FixTests.m; sourceTree = "<group>"; };
+		23BAAF9C1DD5D93C00F7F6AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23BEA9491DDAB72300E1FA33 /* VFMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFMath.h; sourceTree = "<group>"; };
+		23BEA94B1DDAB7BD00E1FA33 /* VFMathTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFMathTypes.h; sourceTree = "<group>"; };
+		23BEA94E1DDAB82C00E1FA33 /* VFMatrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VFMatrix.c; sourceTree = "<group>"; };
+		23BEA94F1DDAB82C00E1FA33 /* VFMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFMatrix.h; sourceTree = "<group>"; };
+		23BEA9521DDAB84B00E1FA33 /* VFVector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VFVector.c; sourceTree = "<group>"; };
+		23BEA9531DDAB84B00E1FA33 /* VFVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFVector.h; sourceTree = "<group>"; };
+		23BEA9561DDAB86C00E1FA33 /* VFColor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VFColor.c; sourceTree = "<group>"; };
+		23BEA9571DDAB86C00E1FA33 /* VFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFColor.h; sourceTree = "<group>"; };
+		23F67ABF1DD5A50400359B78 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		23F77F271DD414D600C5E815 /* DrawTriangle_Fix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawTriangle_Fix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F77F2B1DD414D600C5E815 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		23F77F2D1DD414D600C5E815 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		23F77F2E1DD414D600C5E815 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		23F77F301DD414D600C5E815 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		23F77F311DD414D600C5E815 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		23F77F341DD414D600C5E815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		23F77F361DD414D600C5E815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23F77F391DD414D600C5E815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23F77F3B1DD414D600C5E815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23F77F431DD4152500C5E815 /* VFCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFCommon.h; sourceTree = "<group>"; };
+		23F77F441DD4152500C5E815 /* VFFreeSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFFreeSource.h; sourceTree = "<group>"; };
+		23F77F451DD4152500C5E815 /* VFHandleError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFHandleError.h; sourceTree = "<group>"; };
+		23F77F461DD4152500C5E815 /* VFOpenGLES2XHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFOpenGLES2XHeader.h; sourceTree = "<group>"; };
+		23F77F481DD4152500C5E815 /* VFBaseGeometricVertexData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFBaseGeometricVertexData.h; sourceTree = "<group>"; };
+		23F77F491DD4152500C5E815 /* VFVertexDatasManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFVertexDatasManager.h; sourceTree = "<group>"; };
+		23F77F4A1DD4152500C5E815 /* VFVertexDatasManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFVertexDatasManager.m; sourceTree = "<group>"; };
+		23F77F4D1DD4152500C5E815 /* VFFrameBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFFrameBufferManager.h; sourceTree = "<group>"; };
+		23F77F4E1DD4152500C5E815 /* VFFrameBufferManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFFrameBufferManager.m; sourceTree = "<group>"; };
+		23F77F4F1DD4152500C5E815 /* VFRenderBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFRenderBufferManager.h; sourceTree = "<group>"; };
+		23F77F501DD4152500C5E815 /* VFRenderBufferManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFRenderBufferManager.m; sourceTree = "<group>"; };
+		23F77F511DD4152500C5E815 /* VFRenderContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFRenderContext.h; sourceTree = "<group>"; };
+		23F77F521DD4152500C5E815 /* VFRenderContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFRenderContext.m; sourceTree = "<group>"; };
+		23F77F531DD4152500C5E815 /* VFRenderWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFRenderWindow.h; sourceTree = "<group>"; };
+		23F77F541DD4152500C5E815 /* VFRenderWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFRenderWindow.m; sourceTree = "<group>"; };
+		23F77F561DD4152500C5E815 /* VFFragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VFFragmentShader.glsl; sourceTree = "<group>"; };
+		23F77F571DD4152500C5E815 /* VFShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFShaderManager.h; sourceTree = "<group>"; };
+		23F77F581DD4152500C5E815 /* VFShaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFShaderManager.m; sourceTree = "<group>"; };
+		23F77F591DD4152500C5E815 /* VFVertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VFVertexShader.glsl; sourceTree = "<group>"; };
+		23F77F621DD416C600C5E815 /* VFShaderValueInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFShaderValueInfo.h; sourceTree = "<group>"; };
+		23F77F631DD416C600C5E815 /* VFShaderValueInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFShaderValueInfo.m; sourceTree = "<group>"; };
+		23F77F651DD44B7B00C5E815 /* VFShaderValueRexAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFShaderValueRexAnalyzer.h; sourceTree = "<group>"; };
+		23F77F661DD44B7B00C5E815 /* VFShaderValueRexAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFShaderValueRexAnalyzer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23BAAF951DD5D93C00F7F6AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F77F241DD414D600C5E815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23BAAF991DD5D93C00F7F6AD /* DrawTriangle_FixTests */ = {
+			isa = PBXGroup;
+			children = (
+				23BAAF9A1DD5D93C00F7F6AD /* DrawTriangle_FixTests.m */,
+				23BAAF9C1DD5D93C00F7F6AD /* Info.plist */,
+			);
+			path = DrawTriangle_FixTests;
+			sourceTree = "<group>";
+		};
+		23BAAFA31DD7593300F7F6AD /* ShaderAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				23F77F651DD44B7B00C5E815 /* VFShaderValueRexAnalyzer.h */,
+				23F77F661DD44B7B00C5E815 /* VFShaderValueRexAnalyzer.m */,
+				23F77F621DD416C600C5E815 /* VFShaderValueInfo.h */,
+				23F77F631DD416C600C5E815 /* VFShaderValueInfo.m */,
+			);
+			name = ShaderAnalyzer;
+			sourceTree = "<group>";
+		};
+		23BEA9461DDAB6BF00E1FA33 /* VFMaths */ = {
+			isa = PBXGroup;
+			children = (
+				23BEA9491DDAB72300E1FA33 /* VFMath.h */,
+				23BEA94B1DDAB7BD00E1FA33 /* VFMathTypes.h */,
+				23BEA94E1DDAB82C00E1FA33 /* VFMatrix.c */,
+				23BEA94F1DDAB82C00E1FA33 /* VFMatrix.h */,
+				23BEA9521DDAB84B00E1FA33 /* VFVector.c */,
+				23BEA9531DDAB84B00E1FA33 /* VFVector.h */,
+				23BEA9561DDAB86C00E1FA33 /* VFColor.c */,
+				23BEA9571DDAB86C00E1FA33 /* VFColor.h */,
+			);
+			path = VFMaths;
+			sourceTree = "<group>";
+		};
+		23F77F1E1DD414D600C5E815 = {
+			isa = PBXGroup;
+			children = (
+				23F67ABF1DD5A50400359B78 /* OpenGLES.framework */,
+				23F77F291DD414D600C5E815 /* DrawTriangle_Fix */,
+				23BAAF991DD5D93C00F7F6AD /* DrawTriangle_FixTests */,
+				23F77F281DD414D600C5E815 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23F77F281DD414D600C5E815 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23F77F271DD414D600C5E815 /* DrawTriangle_Fix.app */,
+				23BAAF981DD5D93C00F7F6AD /* DrawTriangle_FixTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23F77F291DD414D600C5E815 /* DrawTriangle_Fix */ = {
+			isa = PBXGroup;
+			children = (
+				23F77F411DD4152500C5E815 /* Classes */,
+				23F77F301DD414D600C5E815 /* ViewController.h */,
+				23F77F311DD414D600C5E815 /* ViewController.m */,
+				23F77F2A1DD414D600C5E815 /* Supporting Files */,
+			);
+			path = DrawTriangle_Fix;
+			sourceTree = "<group>";
+		};
+		23F77F2A1DD414D600C5E815 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23F77F2D1DD414D600C5E815 /* AppDelegate.h */,
+				23F77F2E1DD414D600C5E815 /* AppDelegate.m */,
+				23F77F331DD414D600C5E815 /* Main.storyboard */,
+				23F77F361DD414D600C5E815 /* Assets.xcassets */,
+				23F77F381DD414D600C5E815 /* LaunchScreen.storyboard */,
+				23F77F3B1DD414D600C5E815 /* Info.plist */,
+				23F77F2B1DD414D600C5E815 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23F77F411DD4152500C5E815 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				23F77F421DD4152500C5E815 /* Common */,
+				23F77F471DD4152500C5E815 /* Datas */,
+				23F77F4C1DD4152500C5E815 /* Render */,
+				23F77F551DD4152500C5E815 /* Shader */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		23F77F421DD4152500C5E815 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				23F77F431DD4152500C5E815 /* VFCommon.h */,
+				23BAAF931DD5BAF400F7F6AD /* VFShaderValueLocation.h */,
+				23F77F441DD4152500C5E815 /* VFFreeSource.h */,
+				23F77F451DD4152500C5E815 /* VFHandleError.h */,
+				23F77F461DD4152500C5E815 /* VFOpenGLES2XHeader.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		23F77F471DD4152500C5E815 /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				23BEA9461DDAB6BF00E1FA33 /* VFMaths */,
+				23F77F481DD4152500C5E815 /* VFBaseGeometricVertexData.h */,
+				23F77F491DD4152500C5E815 /* VFVertexDatasManager.h */,
+				23F77F4A1DD4152500C5E815 /* VFVertexDatasManager.m */,
+			);
+			path = Datas;
+			sourceTree = "<group>";
+		};
+		23F77F4C1DD4152500C5E815 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				23F77F4D1DD4152500C5E815 /* VFFrameBufferManager.h */,
+				23F77F4E1DD4152500C5E815 /* VFFrameBufferManager.m */,
+				23F77F4F1DD4152500C5E815 /* VFRenderBufferManager.h */,
+				23F77F501DD4152500C5E815 /* VFRenderBufferManager.m */,
+				23F77F511DD4152500C5E815 /* VFRenderContext.h */,
+				23F77F521DD4152500C5E815 /* VFRenderContext.m */,
+				23F77F531DD4152500C5E815 /* VFRenderWindow.h */,
+				23F77F541DD4152500C5E815 /* VFRenderWindow.m */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
+		23F77F551DD4152500C5E815 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				23BAAFA31DD7593300F7F6AD /* ShaderAnalyzer */,
+				23F77F591DD4152500C5E815 /* VFVertexShader.glsl */,
+				23F77F561DD4152500C5E815 /* VFFragmentShader.glsl */,
+				23F77F571DD4152500C5E815 /* VFShaderManager.h */,
+				23F77F581DD4152500C5E815 /* VFShaderManager.m */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23BAAF971DD5D93C00F7F6AD /* DrawTriangle_FixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23BAAF9F1DD5D93C00F7F6AD /* Build configuration list for PBXNativeTarget "DrawTriangle_FixTests" */;
+			buildPhases = (
+				23BAAF941DD5D93C00F7F6AD /* Sources */,
+				23BAAF951DD5D93C00F7F6AD /* Frameworks */,
+				23BAAF961DD5D93C00F7F6AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23BAAF9E1DD5D93C00F7F6AD /* PBXTargetDependency */,
+			);
+			name = DrawTriangle_FixTests;
+			productName = DrawTriangle_FixTests;
+			productReference = 23BAAF981DD5D93C00F7F6AD /* DrawTriangle_FixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		23F77F261DD414D600C5E815 /* DrawTriangle_Fix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23F77F3E1DD414D600C5E815 /* Build configuration list for PBXNativeTarget "DrawTriangle_Fix" */;
+			buildPhases = (
+				23F77F231DD414D600C5E815 /* Sources */,
+				23F77F241DD414D600C5E815 /* Frameworks */,
+				23F77F251DD414D600C5E815 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrawTriangle_Fix;
+			productName = DrawTriangle_Fix;
+			productReference = 23F77F271DD414D600C5E815 /* DrawTriangle_Fix.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23F77F1F1DD414D600C5E815 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = windy;
+				TargetAttributes = {
+					23BAAF971DD5D93C00F7F6AD = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 23F77F261DD414D600C5E815;
+					};
+					23F77F261DD414D600C5E815 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 23F77F221DD414D600C5E815 /* Build configuration list for PBXProject "DrawTriangle_Fix" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23F77F1E1DD414D600C5E815;
+			productRefGroup = 23F77F281DD414D600C5E815 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23F77F261DD414D600C5E815 /* DrawTriangle_Fix */,
+				23BAAF971DD5D93C00F7F6AD /* DrawTriangle_FixTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23BAAF961DD5D93C00F7F6AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F77F251DD414D600C5E815 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F77F5F1DD4152500C5E815 /* VFFragmentShader.glsl in Resources */,
+				23F77F611DD4152500C5E815 /* VFVertexShader.glsl in Resources */,
+				23F77F3A1DD414D600C5E815 /* LaunchScreen.storyboard in Resources */,
+				23F77F371DD414D600C5E815 /* Assets.xcassets in Resources */,
+				23F77F351DD414D600C5E815 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23BAAF941DD5D93C00F7F6AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23BEA9511DDAB82C00E1FA33 /* VFMatrix.c in Sources */,
+				23BEA9591DDAB86C00E1FA33 /* VFColor.c in Sources */,
+				23BEA9551DDAB84B00E1FA33 /* VFVector.c in Sources */,
+				23BAAF9B1DD5D93C00F7F6AD /* DrawTriangle_FixTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F77F231DD414D600C5E815 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23BEA9501DDAB82C00E1FA33 /* VFMatrix.c in Sources */,
+				23F77F5D1DD4152500C5E815 /* VFRenderContext.m in Sources */,
+				23F77F321DD414D600C5E815 /* ViewController.m in Sources */,
+				23F77F5C1DD4152500C5E815 /* VFRenderBufferManager.m in Sources */,
+				23F77F2F1DD414D600C5E815 /* AppDelegate.m in Sources */,
+				23BEA9581DDAB86C00E1FA33 /* VFColor.c in Sources */,
+				23F77F641DD416C600C5E815 /* VFShaderValueInfo.m in Sources */,
+				23F77F2C1DD414D600C5E815 /* main.m in Sources */,
+				23F77F5A1DD4152500C5E815 /* VFVertexDatasManager.m in Sources */,
+				23BEA9541DDAB84B00E1FA33 /* VFVector.c in Sources */,
+				23F77F671DD44B7B00C5E815 /* VFShaderValueRexAnalyzer.m in Sources */,
+				23F77F5B1DD4152500C5E815 /* VFFrameBufferManager.m in Sources */,
+				23F77F5E1DD4152500C5E815 /* VFRenderWindow.m in Sources */,
+				23F77F601DD4152500C5E815 /* VFShaderManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23BAAF9E1DD5D93C00F7F6AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23F77F261DD414D600C5E815 /* DrawTriangle_Fix */;
+			targetProxy = 23BAAF9D1DD5D93C00F7F6AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		23F77F331DD414D600C5E815 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23F77F341DD414D600C5E815 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		23F77F381DD414D600C5E815 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23F77F391DD414D600C5E815 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23BAAFA01DD5D93C00F7F6AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DrawTriangle_FixTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windy.DrawTriangle-FixTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrawTriangle_Fix.app/DrawTriangle_Fix";
+			};
+			name = Debug;
+		};
+		23BAAFA11DD5D93C00F7F6AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DrawTriangle_FixTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windy.DrawTriangle-FixTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrawTriangle_Fix.app/DrawTriangle_Fix";
+			};
+			name = Release;
+		};
+		23F77F3C1DD414D600C5E815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23F77F3D1DD414D600C5E815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23F77F3F1DD414D600C5E815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = DrawTriangle_Fix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windy.DrawTriangle-Fix";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		23F77F401DD414D600C5E815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = DrawTriangle_Fix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windy.DrawTriangle-Fix";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23BAAF9F1DD5D93C00F7F6AD /* Build configuration list for PBXNativeTarget "DrawTriangle_FixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23BAAFA01DD5D93C00F7F6AD /* Debug */,
+				23BAAFA11DD5D93C00F7F6AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23F77F221DD414D600C5E815 /* Build configuration list for PBXProject "DrawTriangle_Fix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F77F3C1DD414D600C5E815 /* Debug */,
+				23F77F3D1DD414D600C5E815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23F77F3E1DD414D600C5E815 /* Build configuration list for PBXNativeTarget "DrawTriangle_Fix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F77F3F1DD414D600C5E815 /* Debug */,
+				23F77F401DD414D600C5E815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23F77F1F1DD414D600C5E815 /* Project object */;
+}
