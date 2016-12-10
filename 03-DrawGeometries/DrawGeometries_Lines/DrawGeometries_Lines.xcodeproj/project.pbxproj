@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23F136FC1DE70D2F001F2C2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F136FB1DE70D2F001F2C2A /* main.m */; };
+		23F136FF1DE70D2F001F2C2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F136FE1DE70D2F001F2C2A /* AppDelegate.m */; };
+		23F137021DE70D2F001F2C2A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F137011DE70D2F001F2C2A /* ViewController.m */; };
+		23F137051DE70D2F001F2C2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F137031DE70D2F001F2C2A /* Main.storyboard */; };
+		23F137071DE70D2F001F2C2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F137061DE70D2F001F2C2A /* Assets.xcassets */; };
+		23F1370A1DE70D2F001F2C2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F137081DE70D2F001F2C2A /* LaunchScreen.storyboard */; };
+		23F1373C1DE70D9C001F2C2A /* VFColor.c in Sources */ = {isa = PBXBuildFile; fileRef = 23F1371B1DE70D9C001F2C2A /* VFColor.c */; };
+		23F1373D1DE70D9C001F2C2A /* VFMatrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 23F1371F1DE70D9C001F2C2A /* VFMatrix.c */; };
+		23F137401DE70D9C001F2C2A /* VFVector.c in Sources */ = {isa = PBXBuildFile; fileRef = 23F137251DE70D9C001F2C2A /* VFVector.c */; };
+		23F137411DE70D9C001F2C2A /* VFVertexDatasManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F137281DE70D9C001F2C2A /* VFVertexDatasManager.m */; };
+		23F137421DE70D9C001F2C2A /* VFFrameBufferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F1372C1DE70D9C001F2C2A /* VFFrameBufferManager.m */; };
+		23F137431DE70D9C001F2C2A /* VFRenderBufferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F1372E1DE70D9C001F2C2A /* VFRenderBufferManager.m */; };
+		23F137441DE70D9C001F2C2A /* VFRenderContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F137301DE70D9C001F2C2A /* VFRenderContext.m */; };
+		23F137451DE70D9C001F2C2A /* VFRenderWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F137321DE70D9C001F2C2A /* VFRenderWindow.m */; };
+		23F137461DE70D9C001F2C2A /* VFFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 23F137341DE70D9C001F2C2A /* VFFragmentShader.glsl */; };
+		23F137471DE70D9C001F2C2A /* VFShaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F137361DE70D9C001F2C2A /* VFShaderManager.m */; };
+		23F137481DE70D9C001F2C2A /* VFShaderValueInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F137381DE70D9C001F2C2A /* VFShaderValueInfo.m */; };
+		23F137491DE70D9C001F2C2A /* VFShaderValueRexAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F1373A1DE70D9C001F2C2A /* VFShaderValueRexAnalyzer.m */; };
+		23F1374A1DE70D9C001F2C2A /* VFVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 23F1373B1DE70D9C001F2C2A /* VFVertexShader.glsl */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		230B525C1DEECF550082D0C9 /* VFBEZ3DPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFBEZ3DPoints.h; sourceTree = "<group>"; };
+		23F136F71DE70D2F001F2C2A /* DrawGeometries_Lines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawGeometries_Lines.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F136FB1DE70D2F001F2C2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		23F136FD1DE70D2F001F2C2A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		23F136FE1DE70D2F001F2C2A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		23F137001DE70D2F001F2C2A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		23F137011DE70D2F001F2C2A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		23F137041DE70D2F001F2C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		23F137061DE70D2F001F2C2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23F137091DE70D2F001F2C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23F1370B1DE70D2F001F2C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23F137131DE70D9C001F2C2A /* VFCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFCommon.h; sourceTree = "<group>"; };
+		23F137141DE70D9C001F2C2A /* VFFreeSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFFreeSource.h; sourceTree = "<group>"; };
+		23F137151DE70D9C001F2C2A /* VFHandleError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFHandleError.h; sourceTree = "<group>"; };
+		23F137161DE70D9C001F2C2A /* VFOpenGLES2XHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFOpenGLES2XHeader.h; sourceTree = "<group>"; };
+		23F137171DE70D9C001F2C2A /* VFShaderValueLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFShaderValueLocation.h; sourceTree = "<group>"; };
+		23F137191DE70D9C001F2C2A /* VFBaseGeometricVertexData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFBaseGeometricVertexData.h; sourceTree = "<group>"; };
+		23F1371B1DE70D9C001F2C2A /* VFColor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VFColor.c; sourceTree = "<group>"; };
+		23F1371C1DE70D9C001F2C2A /* VFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFColor.h; sourceTree = "<group>"; };
+		23F1371D1DE70D9C001F2C2A /* VFMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFMath.h; sourceTree = "<group>"; };
+		23F1371E1DE70D9C001F2C2A /* VFMathTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFMathTypes.h; sourceTree = "<group>"; };
+		23F1371F1DE70D9C001F2C2A /* VFMatrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VFMatrix.c; sourceTree = "<group>"; };
+		23F137201DE70D9C001F2C2A /* VFMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFMatrix.h; sourceTree = "<group>"; };
+		23F137251DE70D9C001F2C2A /* VFVector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VFVector.c; sourceTree = "<group>"; };
+		23F137261DE70D9C001F2C2A /* VFVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFVector.h; sourceTree = "<group>"; };
+		23F137271DE70D9C001F2C2A /* VFVertexDatasManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFVertexDatasManager.h; sourceTree = "<group>"; };
+		23F137281DE70D9C001F2C2A /* VFVertexDatasManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFVertexDatasManager.m; sourceTree = "<group>"; };
+		23F1372B1DE70D9C001F2C2A /* VFFrameBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFFrameBufferManager.h; sourceTree = "<group>"; };
+		23F1372C1DE70D9C001F2C2A /* VFFrameBufferManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFFrameBufferManager.m; sourceTree = "<group>"; };
+		23F1372D1DE70D9C001F2C2A /* VFRenderBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFRenderBufferManager.h; sourceTree = "<group>"; };
+		23F1372E1DE70D9C001F2C2A /* VFRenderBufferManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFRenderBufferManager.m; sourceTree = "<group>"; };
+		23F1372F1DE70D9C001F2C2A /* VFRenderContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFRenderContext.h; sourceTree = "<group>"; };
+		23F137301DE70D9C001F2C2A /* VFRenderContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFRenderContext.m; sourceTree = "<group>"; };
+		23F137311DE70D9C001F2C2A /* VFRenderWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFRenderWindow.h; sourceTree = "<group>"; };
+		23F137321DE70D9C001F2C2A /* VFRenderWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFRenderWindow.m; sourceTree = "<group>"; };
+		23F137341DE70D9C001F2C2A /* VFFragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VFFragmentShader.glsl; sourceTree = "<group>"; };
+		23F137351DE70D9C001F2C2A /* VFShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFShaderManager.h; sourceTree = "<group>"; };
+		23F137361DE70D9C001F2C2A /* VFShaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFShaderManager.m; sourceTree = "<group>"; };
+		23F137371DE70D9C001F2C2A /* VFShaderValueInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFShaderValueInfo.h; sourceTree = "<group>"; };
+		23F137381DE70D9C001F2C2A /* VFShaderValueInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFShaderValueInfo.m; sourceTree = "<group>"; };
+		23F137391DE70D9C001F2C2A /* VFShaderValueRexAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFShaderValueRexAnalyzer.h; sourceTree = "<group>"; };
+		23F1373A1DE70D9C001F2C2A /* VFShaderValueRexAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFShaderValueRexAnalyzer.m; sourceTree = "<group>"; };
+		23F1373B1DE70D9C001F2C2A /* VFVertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VFVertexShader.glsl; sourceTree = "<group>"; };
+		23F1B9371DE9BBA7008D8EEC /* VFRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFRound.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23F136F41DE70D2F001F2C2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23F136EE1DE70D2F001F2C2A = {
+			isa = PBXGroup;
+			children = (
+				23F136F91DE70D2F001F2C2A /* DrawGeometries_Lines */,
+				23F136F81DE70D2F001F2C2A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23F136F81DE70D2F001F2C2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23F136F71DE70D2F001F2C2A /* DrawGeometries_Lines.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23F136F91DE70D2F001F2C2A /* DrawGeometries_Lines */ = {
+			isa = PBXGroup;
+			children = (
+				23F137111DE70D9C001F2C2A /* Classes */,
+				23F137001DE70D2F001F2C2A /* ViewController.h */,
+				23F137011DE70D2F001F2C2A /* ViewController.m */,
+				23F136FA1DE70D2F001F2C2A /* Supporting Files */,
+			);
+			path = DrawGeometries_Lines;
+			sourceTree = "<group>";
+		};
+		23F136FA1DE70D2F001F2C2A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23F136FD1DE70D2F001F2C2A /* AppDelegate.h */,
+				23F136FE1DE70D2F001F2C2A /* AppDelegate.m */,
+				23F137031DE70D2F001F2C2A /* Main.storyboard */,
+				23F137061DE70D2F001F2C2A /* Assets.xcassets */,
+				23F137081DE70D2F001F2C2A /* LaunchScreen.storyboard */,
+				23F1370B1DE70D2F001F2C2A /* Info.plist */,
+				23F136FB1DE70D2F001F2C2A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23F137111DE70D9C001F2C2A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				23F137121DE70D9C001F2C2A /* Common */,
+				23F137181DE70D9C001F2C2A /* Datas */,
+				23F1372A1DE70D9C001F2C2A /* Render */,
+				23F137331DE70D9C001F2C2A /* Shader */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		23F137121DE70D9C001F2C2A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				23F137131DE70D9C001F2C2A /* VFCommon.h */,
+				23F137141DE70D9C001F2C2A /* VFFreeSource.h */,
+				23F137151DE70D9C001F2C2A /* VFHandleError.h */,
+				23F137161DE70D9C001F2C2A /* VFOpenGLES2XHeader.h */,
+				23F137171DE70D9C001F2C2A /* VFShaderValueLocation.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		23F137181DE70D9C001F2C2A /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				23F1371A1DE70D9C001F2C2A /* VFMaths */,
+				23F1B9371DE9BBA7008D8EEC /* VFRound.h */,
+				230B525C1DEECF550082D0C9 /* VFBEZ3DPoints.h */,
+				23F137191DE70D9C001F2C2A /* VFBaseGeometricVertexData.h */,
+				23F137271DE70D9C001F2C2A /* VFVertexDatasManager.h */,
+				23F137281DE70D9C001F2C2A /* VFVertexDatasManager.m */,
+			);
+			path = Datas;
+			sourceTree = "<group>";
+		};
+		23F1371A1DE70D9C001F2C2A /* VFMaths */ = {
+			isa = PBXGroup;
+			children = (
+				23F1371B1DE70D9C001F2C2A /* VFColor.c */,
+				23F1371C1DE70D9C001F2C2A /* VFColor.h */,
+				23F1371D1DE70D9C001F2C2A /* VFMath.h */,
+				23F1371E1DE70D9C001F2C2A /* VFMathTypes.h */,
+				23F1371F1DE70D9C001F2C2A /* VFMatrix.c */,
+				23F137201DE70D9C001F2C2A /* VFMatrix.h */,
+				23F137251DE70D9C001F2C2A /* VFVector.c */,
+				23F137261DE70D9C001F2C2A /* VFVector.h */,
+			);
+			path = VFMaths;
+			sourceTree = "<group>";
+		};
+		23F1372A1DE70D9C001F2C2A /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				23F1372B1DE70D9C001F2C2A /* VFFrameBufferManager.h */,
+				23F1372C1DE70D9C001F2C2A /* VFFrameBufferManager.m */,
+				23F1372D1DE70D9C001F2C2A /* VFRenderBufferManager.h */,
+				23F1372E1DE70D9C001F2C2A /* VFRenderBufferManager.m */,
+				23F1372F1DE70D9C001F2C2A /* VFRenderContext.h */,
+				23F137301DE70D9C001F2C2A /* VFRenderContext.m */,
+				23F137311DE70D9C001F2C2A /* VFRenderWindow.h */,
+				23F137321DE70D9C001F2C2A /* VFRenderWindow.m */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
+		23F137331DE70D9C001F2C2A /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				23F1374B1DE70E4E001F2C2A /* ShaderAnalyzer */,
+				23F1373B1DE70D9C001F2C2A /* VFVertexShader.glsl */,
+				23F137341DE70D9C001F2C2A /* VFFragmentShader.glsl */,
+				23F137351DE70D9C001F2C2A /* VFShaderManager.h */,
+				23F137361DE70D9C001F2C2A /* VFShaderManager.m */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		23F1374B1DE70E4E001F2C2A /* ShaderAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				23F137371DE70D9C001F2C2A /* VFShaderValueInfo.h */,
+				23F137381DE70D9C001F2C2A /* VFShaderValueInfo.m */,
+				23F137391DE70D9C001F2C2A /* VFShaderValueRexAnalyzer.h */,
+				23F1373A1DE70D9C001F2C2A /* VFShaderValueRexAnalyzer.m */,
+			);
+			name = ShaderAnalyzer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23F136F61DE70D2F001F2C2A /* DrawGeometries_Lines */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23F1370E1DE70D2F001F2C2A /* Build configuration list for PBXNativeTarget "DrawGeometries_Lines" */;
+			buildPhases = (
+				23F136F31DE70D2F001F2C2A /* Sources */,
+				23F136F41DE70D2F001F2C2A /* Frameworks */,
+				23F136F51DE70D2F001F2C2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrawGeometries_Lines;
+			productName = DrawGeometries_Lines;
+			productReference = 23F136F71DE70D2F001F2C2A /* DrawGeometries_Lines.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23F136EF1DE70D2F001F2C2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = windy;
+				TargetAttributes = {
+					23F136F61DE70D2F001F2C2A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 23F136F21DE70D2F001F2C2A /* Build configuration list for PBXProject "DrawGeometries_Lines" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23F136EE1DE70D2F001F2C2A;
+			productRefGroup = 23F136F81DE70D2F001F2C2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23F136F61DE70D2F001F2C2A /* DrawGeometries_Lines */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23F136F51DE70D2F001F2C2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F137461DE70D9C001F2C2A /* VFFragmentShader.glsl in Resources */,
+				23F1374A1DE70D9C001F2C2A /* VFVertexShader.glsl in Resources */,
+				23F1370A1DE70D2F001F2C2A /* LaunchScreen.storyboard in Resources */,
+				23F137071DE70D2F001F2C2A /* Assets.xcassets in Resources */,
+				23F137051DE70D2F001F2C2A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23F136F31DE70D2F001F2C2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F137451DE70D9C001F2C2A /* VFRenderWindow.m in Sources */,
+				23F137021DE70D2F001F2C2A /* ViewController.m in Sources */,
+				23F137471DE70D9C001F2C2A /* VFShaderManager.m in Sources */,
+				23F137441DE70D9C001F2C2A /* VFRenderContext.m in Sources */,
+				23F137481DE70D9C001F2C2A /* VFShaderValueInfo.m in Sources */,
+				23F1373D1DE70D9C001F2C2A /* VFMatrix.c in Sources */,
+				23F137401DE70D9C001F2C2A /* VFVector.c in Sources */,
+				23F1373C1DE70D9C001F2C2A /* VFColor.c in Sources */,
+				23F136FF1DE70D2F001F2C2A /* AppDelegate.m in Sources */,
+				23F137491DE70D9C001F2C2A /* VFShaderValueRexAnalyzer.m in Sources */,
+				23F137431DE70D9C001F2C2A /* VFRenderBufferManager.m in Sources */,
+				23F136FC1DE70D2F001F2C2A /* main.m in Sources */,
+				23F137411DE70D9C001F2C2A /* VFVertexDatasManager.m in Sources */,
+				23F137421DE70D9C001F2C2A /* VFFrameBufferManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		23F137031DE70D2F001F2C2A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23F137041DE70D2F001F2C2A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		23F137081DE70D2F001F2C2A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23F137091DE70D2F001F2C2A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23F1370C1DE70D2F001F2C2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23F1370D1DE70D2F001F2C2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23F1370F1DE70D2F001F2C2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DrawGeometries_Lines/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windy.DrawGeometries-Lines";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		23F137101DE70D2F001F2C2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DrawGeometries_Lines/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windy.DrawGeometries-Lines";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23F136F21DE70D2F001F2C2A /* Build configuration list for PBXProject "DrawGeometries_Lines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F1370C1DE70D2F001F2C2A /* Debug */,
+				23F1370D1DE70D2F001F2C2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23F1370E1DE70D2F001F2C2A /* Build configuration list for PBXNativeTarget "DrawGeometries_Lines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F1370F1DE70D2F001F2C2A /* Debug */,
+				23F137101DE70D2F001F2C2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23F136EF1DE70D2F001F2C2A /* Project object */;
+}

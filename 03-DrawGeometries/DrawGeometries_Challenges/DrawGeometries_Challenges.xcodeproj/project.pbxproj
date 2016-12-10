@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		230BEA6B1DF1BFBA00AB9C6D /* VFDrawInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BEA6A1DF1BFBA00AB9C6D /* VFDrawInfo.m */; };
+		230BEA6E1DF1BFDE00AB9C6D /* VFAttachVertexInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BEA6D1DF1BFDE00AB9C6D /* VFAttachVertexInfo.m */; };
+		236FB9191DF059A000D62962 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FB9181DF059A000D62962 /* main.m */; };
+		236FB91C1DF059A000D62962 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FB91B1DF059A000D62962 /* AppDelegate.m */; };
+		236FB91F1DF059A000D62962 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FB91E1DF059A000D62962 /* ViewController.m */; };
+		236FB9221DF059A000D62962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236FB9201DF059A000D62962 /* Main.storyboard */; };
+		236FB9241DF059A000D62962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236FB9231DF059A000D62962 /* Assets.xcassets */; };
+		236FB9271DF059A000D62962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236FB9251DF059A000D62962 /* LaunchScreen.storyboard */; };
+		236FB9561DF05AEF00D62962 /* VFColor.c in Sources */ = {isa = PBXBuildFile; fileRef = 236FB9391DF05AEF00D62962 /* VFColor.c */; };
+		236FB9571DF05AEF00D62962 /* VFMatrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 236FB93D1DF05AEF00D62962 /* VFMatrix.c */; };
+		236FB9581DF05AEF00D62962 /* VFVector.c in Sources */ = {isa = PBXBuildFile; fileRef = 236FB93F1DF05AEF00D62962 /* VFVector.c */; };
+		236FB9591DF05AEF00D62962 /* VFVertexDatasManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FB9431DF05AEF00D62962 /* VFVertexDatasManager.m */; };
+		236FB95A1DF05AEF00D62962 /* VFFrameBufferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FB9461DF05AEF00D62962 /* VFFrameBufferManager.m */; };
+		236FB95B1DF05AEF00D62962 /* VFRenderBufferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FB9481DF05AEF00D62962 /* VFRenderBufferManager.m */; };
+		236FB95C1DF05AEF00D62962 /* VFRenderContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FB94A1DF05AEF00D62962 /* VFRenderContext.m */; };
+		236FB95D1DF05AEF00D62962 /* VFRenderWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FB94C1DF05AEF00D62962 /* VFRenderWindow.m */; };
+		236FB95E1DF05AEF00D62962 /* VFFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 236FB94E1DF05AEF00D62962 /* VFFragmentShader.glsl */; };
+		236FB95F1DF05AEF00D62962 /* VFShaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FB9501DF05AEF00D62962 /* VFShaderManager.m */; };
+		236FB9601DF05AEF00D62962 /* VFShaderValueInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FB9521DF05AEF00D62962 /* VFShaderValueInfo.m */; };
+		236FB9611DF05AEF00D62962 /* VFShaderValueRexAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FB9541DF05AEF00D62962 /* VFShaderValueRexAnalyzer.m */; };
+		236FB9621DF05AEF00D62962 /* VFVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 236FB9551DF05AEF00D62962 /* VFVertexShader.glsl */; };
+		236FB9681DF1676900D62962 /* NSValue+Struct2Value.m in Sources */ = {isa = PBXBuildFile; fileRef = 236FB9671DF1676900D62962 /* NSValue+Struct2Value.m */; };
+		2391B78F1DF3B02300C53B92 /* VFVBODataStoredInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2391B78E1DF3B02300C53B92 /* VFVBODataStoredInfo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		230BEA691DF1BFBA00AB9C6D /* VFDrawInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFDrawInfo.h; sourceTree = "<group>"; };
+		230BEA6A1DF1BFBA00AB9C6D /* VFDrawInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFDrawInfo.m; sourceTree = "<group>"; };
+		230BEA6C1DF1BFDE00AB9C6D /* VFAttachVertexInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFAttachVertexInfo.h; sourceTree = "<group>"; };
+		230BEA6D1DF1BFDE00AB9C6D /* VFAttachVertexInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFAttachVertexInfo.m; sourceTree = "<group>"; };
+		236FB9141DF059A000D62962 /* DrawGeometries_Challenges.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawGeometries_Challenges.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		236FB9181DF059A000D62962 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		236FB91A1DF059A000D62962 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		236FB91B1DF059A000D62962 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		236FB91D1DF059A000D62962 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		236FB91E1DF059A000D62962 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		236FB9211DF059A000D62962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		236FB9231DF059A000D62962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		236FB9261DF059A000D62962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		236FB9281DF059A000D62962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		236FB9301DF05AEF00D62962 /* VFCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFCommon.h; sourceTree = "<group>"; };
+		236FB9311DF05AEF00D62962 /* VFFreeSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFFreeSource.h; sourceTree = "<group>"; };
+		236FB9321DF05AEF00D62962 /* VFHandleError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFHandleError.h; sourceTree = "<group>"; };
+		236FB9331DF05AEF00D62962 /* VFOpenGLES2XHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFOpenGLES2XHeader.h; sourceTree = "<group>"; };
+		236FB9341DF05AEF00D62962 /* VFShaderValueLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFShaderValueLocation.h; sourceTree = "<group>"; };
+		236FB9361DF05AEF00D62962 /* VFBaseGeometricVertexData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFBaseGeometricVertexData.h; sourceTree = "<group>"; };
+		236FB9391DF05AEF00D62962 /* VFColor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VFColor.c; sourceTree = "<group>"; };
+		236FB93A1DF05AEF00D62962 /* VFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFColor.h; sourceTree = "<group>"; };
+		236FB93B1DF05AEF00D62962 /* VFMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFMath.h; sourceTree = "<group>"; };
+		236FB93C1DF05AEF00D62962 /* VFMathTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFMathTypes.h; sourceTree = "<group>"; };
+		236FB93D1DF05AEF00D62962 /* VFMatrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VFMatrix.c; sourceTree = "<group>"; };
+		236FB93E1DF05AEF00D62962 /* VFMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFMatrix.h; sourceTree = "<group>"; };
+		236FB93F1DF05AEF00D62962 /* VFVector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VFVector.c; sourceTree = "<group>"; };
+		236FB9401DF05AEF00D62962 /* VFVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFVector.h; sourceTree = "<group>"; };
+		236FB9421DF05AEF00D62962 /* VFVertexDatasManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFVertexDatasManager.h; sourceTree = "<group>"; };
+		236FB9431DF05AEF00D62962 /* VFVertexDatasManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFVertexDatasManager.m; sourceTree = "<group>"; };
+		236FB9451DF05AEF00D62962 /* VFFrameBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFFrameBufferManager.h; sourceTree = "<group>"; };
+		236FB9461DF05AEF00D62962 /* VFFrameBufferManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFFrameBufferManager.m; sourceTree = "<group>"; };
+		236FB9471DF05AEF00D62962 /* VFRenderBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFRenderBufferManager.h; sourceTree = "<group>"; };
+		236FB9481DF05AEF00D62962 /* VFRenderBufferManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFRenderBufferManager.m; sourceTree = "<group>"; };
+		236FB9491DF05AEF00D62962 /* VFRenderContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFRenderContext.h; sourceTree = "<group>"; };
+		236FB94A1DF05AEF00D62962 /* VFRenderContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFRenderContext.m; sourceTree = "<group>"; };
+		236FB94B1DF05AEF00D62962 /* VFRenderWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFRenderWindow.h; sourceTree = "<group>"; };
+		236FB94C1DF05AEF00D62962 /* VFRenderWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFRenderWindow.m; sourceTree = "<group>"; };
+		236FB94E1DF05AEF00D62962 /* VFFragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VFFragmentShader.glsl; sourceTree = "<group>"; };
+		236FB94F1DF05AEF00D62962 /* VFShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFShaderManager.h; sourceTree = "<group>"; };
+		236FB9501DF05AEF00D62962 /* VFShaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFShaderManager.m; sourceTree = "<group>"; };
+		236FB9511DF05AEF00D62962 /* VFShaderValueInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFShaderValueInfo.h; sourceTree = "<group>"; };
+		236FB9521DF05AEF00D62962 /* VFShaderValueInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFShaderValueInfo.m; sourceTree = "<group>"; };
+		236FB9531DF05AEF00D62962 /* VFShaderValueRexAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFShaderValueRexAnalyzer.h; sourceTree = "<group>"; };
+		236FB9541DF05AEF00D62962 /* VFShaderValueRexAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFShaderValueRexAnalyzer.m; sourceTree = "<group>"; };
+		236FB9551DF05AEF00D62962 /* VFVertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VFVertexShader.glsl; sourceTree = "<group>"; };
+		236FB9651DF0679900D62962 /* VFGeometriesPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFGeometriesPoints.h; sourceTree = "<group>"; };
+		236FB9661DF1676900D62962 /* NSValue+Struct2Value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Struct2Value.h"; sourceTree = "<group>"; };
+		236FB9671DF1676900D62962 /* NSValue+Struct2Value.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+Struct2Value.m"; sourceTree = "<group>"; };
+		236FB96A1DF183AB00D62962 /* VFVertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFVertex.h; sourceTree = "<group>"; };
+		2391B78D1DF3B02300C53B92 /* VFVBODataStoredInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFVBODataStoredInfo.h; sourceTree = "<group>"; };
+		2391B78E1DF3B02300C53B92 /* VFVBODataStoredInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFVBODataStoredInfo.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		236FB9111DF059A000D62962 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		230BEA681DF1BFA000AB9C6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				230BEA691DF1BFBA00AB9C6D /* VFDrawInfo.h */,
+				230BEA6A1DF1BFBA00AB9C6D /* VFDrawInfo.m */,
+				2391B78D1DF3B02300C53B92 /* VFVBODataStoredInfo.h */,
+				2391B78E1DF3B02300C53B92 /* VFVBODataStoredInfo.m */,
+				230BEA6C1DF1BFDE00AB9C6D /* VFAttachVertexInfo.h */,
+				230BEA6D1DF1BFDE00AB9C6D /* VFAttachVertexInfo.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		236FB90B1DF059A000D62962 = {
+			isa = PBXGroup;
+			children = (
+				236FB9161DF059A000D62962 /* DrawGeometries_Challenges */,
+				236FB9151DF059A000D62962 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		236FB9151DF059A000D62962 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				236FB9141DF059A000D62962 /* DrawGeometries_Challenges.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		236FB9161DF059A000D62962 /* DrawGeometries_Challenges */ = {
+			isa = PBXGroup;
+			children = (
+				236FB92E1DF05AEF00D62962 /* Classes */,
+				236FB91D1DF059A000D62962 /* ViewController.h */,
+				236FB91E1DF059A000D62962 /* ViewController.m */,
+				236FB9171DF059A000D62962 /* Supporting Files */,
+			);
+			path = DrawGeometries_Challenges;
+			sourceTree = "<group>";
+		};
+		236FB9171DF059A000D62962 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				236FB91A1DF059A000D62962 /* AppDelegate.h */,
+				236FB91B1DF059A000D62962 /* AppDelegate.m */,
+				236FB9201DF059A000D62962 /* Main.storyboard */,
+				236FB9231DF059A000D62962 /* Assets.xcassets */,
+				236FB9251DF059A000D62962 /* LaunchScreen.storyboard */,
+				236FB9281DF059A000D62962 /* Info.plist */,
+				236FB9181DF059A000D62962 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		236FB92E1DF05AEF00D62962 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				236FB92F1DF05AEF00D62962 /* Common */,
+				236FB9351DF05AEF00D62962 /* Datas */,
+				236FB9441DF05AEF00D62962 /* Render */,
+				236FB94D1DF05AEF00D62962 /* Shader */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		236FB92F1DF05AEF00D62962 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				236FB9691DF1677100D62962 /* Category */,
+				236FB9301DF05AEF00D62962 /* VFCommon.h */,
+				236FB96A1DF183AB00D62962 /* VFVertex.h */,
+				236FB9311DF05AEF00D62962 /* VFFreeSource.h */,
+				236FB9321DF05AEF00D62962 /* VFHandleError.h */,
+				236FB9331DF05AEF00D62962 /* VFOpenGLES2XHeader.h */,
+				236FB9341DF05AEF00D62962 /* VFShaderValueLocation.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		236FB9351DF05AEF00D62962 /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				230BEA681DF1BFA000AB9C6D /* Models */,
+				236FB9381DF05AEF00D62962 /* VFMaths */,
+				236FB9651DF0679900D62962 /* VFGeometriesPoints.h */,
+				236FB9361DF05AEF00D62962 /* VFBaseGeometricVertexData.h */,
+				236FB9421DF05AEF00D62962 /* VFVertexDatasManager.h */,
+				236FB9431DF05AEF00D62962 /* VFVertexDatasManager.m */,
+			);
+			path = Datas;
+			sourceTree = "<group>";
+		};
+		236FB9381DF05AEF00D62962 /* VFMaths */ = {
+			isa = PBXGroup;
+			children = (
+				236FB9391DF05AEF00D62962 /* VFColor.c */,
+				236FB93A1DF05AEF00D62962 /* VFColor.h */,
+				236FB93B1DF05AEF00D62962 /* VFMath.h */,
+				236FB93C1DF05AEF00D62962 /* VFMathTypes.h */,
+				236FB93D1DF05AEF00D62962 /* VFMatrix.c */,
+				236FB93E1DF05AEF00D62962 /* VFMatrix.h */,
+				236FB93F1DF05AEF00D62962 /* VFVector.c */,
+				236FB9401DF05AEF00D62962 /* VFVector.h */,
+			);
+			path = VFMaths;
+			sourceTree = "<group>";
+		};
+		236FB9441DF05AEF00D62962 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				236FB9451DF05AEF00D62962 /* VFFrameBufferManager.h */,
+				236FB9461DF05AEF00D62962 /* VFFrameBufferManager.m */,
+				236FB9471DF05AEF00D62962 /* VFRenderBufferManager.h */,
+				236FB9481DF05AEF00D62962 /* VFRenderBufferManager.m */,
+				236FB9491DF05AEF00D62962 /* VFRenderContext.h */,
+				236FB94A1DF05AEF00D62962 /* VFRenderContext.m */,
+				236FB94B1DF05AEF00D62962 /* VFRenderWindow.h */,
+				236FB94C1DF05AEF00D62962 /* VFRenderWindow.m */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
+		236FB94D1DF05AEF00D62962 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				236FB9631DF05AFF00D62962 /* ShaderAnalyzer */,
+				236FB9551DF05AEF00D62962 /* VFVertexShader.glsl */,
+				236FB94E1DF05AEF00D62962 /* VFFragmentShader.glsl */,
+				236FB94F1DF05AEF00D62962 /* VFShaderManager.h */,
+				236FB9501DF05AEF00D62962 /* VFShaderManager.m */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		236FB9631DF05AFF00D62962 /* ShaderAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				236FB9511DF05AEF00D62962 /* VFShaderValueInfo.h */,
+				236FB9521DF05AEF00D62962 /* VFShaderValueInfo.m */,
+				236FB9531DF05AEF00D62962 /* VFShaderValueRexAnalyzer.h */,
+				236FB9541DF05AEF00D62962 /* VFShaderValueRexAnalyzer.m */,
+			);
+			name = ShaderAnalyzer;
+			sourceTree = "<group>";
+		};
+		236FB9691DF1677100D62962 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				236FB9661DF1676900D62962 /* NSValue+Struct2Value.h */,
+				236FB9671DF1676900D62962 /* NSValue+Struct2Value.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		236FB9131DF059A000D62962 /* DrawGeometries_Challenges */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 236FB92B1DF059A000D62962 /* Build configuration list for PBXNativeTarget "DrawGeometries_Challenges" */;
+			buildPhases = (
+				236FB9101DF059A000D62962 /* Sources */,
+				236FB9111DF059A000D62962 /* Frameworks */,
+				236FB9121DF059A000D62962 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrawGeometries_Challenges;
+			productName = DrawGeometries_Challenges;
+			productReference = 236FB9141DF059A000D62962 /* DrawGeometries_Challenges.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		236FB90C1DF059A000D62962 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = windy;
+				TargetAttributes = {
+					236FB9131DF059A000D62962 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 236FB90F1DF059A000D62962 /* Build configuration list for PBXProject "DrawGeometries_Challenges" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 236FB90B1DF059A000D62962;
+			productRefGroup = 236FB9151DF059A000D62962 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				236FB9131DF059A000D62962 /* DrawGeometries_Challenges */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		236FB9121DF059A000D62962 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				236FB95E1DF05AEF00D62962 /* VFFragmentShader.glsl in Resources */,
+				236FB9621DF05AEF00D62962 /* VFVertexShader.glsl in Resources */,
+				236FB9271DF059A000D62962 /* LaunchScreen.storyboard in Resources */,
+				236FB9241DF059A000D62962 /* Assets.xcassets in Resources */,
+				236FB9221DF059A000D62962 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		236FB9101DF059A000D62962 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				236FB91F1DF059A000D62962 /* ViewController.m in Sources */,
+				236FB95C1DF05AEF00D62962 /* VFRenderContext.m in Sources */,
+				2391B78F1DF3B02300C53B92 /* VFVBODataStoredInfo.m in Sources */,
+				230BEA6E1DF1BFDE00AB9C6D /* VFAttachVertexInfo.m in Sources */,
+				236FB95F1DF05AEF00D62962 /* VFShaderManager.m in Sources */,
+				236FB95B1DF05AEF00D62962 /* VFRenderBufferManager.m in Sources */,
+				236FB9611DF05AEF00D62962 /* VFShaderValueRexAnalyzer.m in Sources */,
+				236FB9571DF05AEF00D62962 /* VFMatrix.c in Sources */,
+				236FB9561DF05AEF00D62962 /* VFColor.c in Sources */,
+				236FB91C1DF059A000D62962 /* AppDelegate.m in Sources */,
+				236FB9581DF05AEF00D62962 /* VFVector.c in Sources */,
+				236FB95A1DF05AEF00D62962 /* VFFrameBufferManager.m in Sources */,
+				236FB9601DF05AEF00D62962 /* VFShaderValueInfo.m in Sources */,
+				236FB9591DF05AEF00D62962 /* VFVertexDatasManager.m in Sources */,
+				236FB9191DF059A000D62962 /* main.m in Sources */,
+				230BEA6B1DF1BFBA00AB9C6D /* VFDrawInfo.m in Sources */,
+				236FB95D1DF05AEF00D62962 /* VFRenderWindow.m in Sources */,
+				236FB9681DF1676900D62962 /* NSValue+Struct2Value.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		236FB9201DF059A000D62962 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				236FB9211DF059A000D62962 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		236FB9251DF059A000D62962 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				236FB9261DF059A000D62962 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		236FB9291DF059A000D62962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		236FB92A1DF059A000D62962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		236FB92C1DF059A000D62962 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DrawGeometries_Challenges/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windy.DrawGeometries-Challenges";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		236FB92D1DF059A000D62962 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DrawGeometries_Challenges/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windy.DrawGeometries-Challenges";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		236FB90F1DF059A000D62962 /* Build configuration list for PBXProject "DrawGeometries_Challenges" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				236FB9291DF059A000D62962 /* Debug */,
+				236FB92A1DF059A000D62962 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		236FB92B1DF059A000D62962 /* Build configuration list for PBXNativeTarget "DrawGeometries_Challenges" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				236FB92C1DF059A000D62962 /* Debug */,
+				236FB92D1DF059A000D62962 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 236FB90C1DF059A000D62962 /* Project object */;
+}
