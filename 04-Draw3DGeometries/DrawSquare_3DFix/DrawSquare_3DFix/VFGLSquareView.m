@@ -1,6 +1,6 @@
 //
-//  VFGLTriangleView.m
-//  DrawTriangle_OneStep
+//  VFGLCubeView.m
+//  DrawCube_OneStep
 //
 //  Created by windy on 16/10/25.
 //  Copyright © 2016年 windy. All rights reserved.
@@ -343,7 +343,7 @@ static inline RGBAColor RGBAColorMake(CGFloat red, CGFloat green, CGFloat blue, 
 #define VertexAttributePosition     (0)
 #define StrideCloser                (0)
 
-- (void)attachTriangleVertexArrays {
+- (void)attachCubeVertexArrays {
     
     glEnableVertexAttribArray(VertexAttributePosition);
     
@@ -374,11 +374,12 @@ static inline RGBAColor RGBAColorMake(CGFloat red, CGFloat green, CGFloat blue, 
 #define PositionStartIndex          (0)
 #define DrawIndicesCount            (3)
 
-- (void)drawTriangle {
+- (void)drawCube {
     
-    glDrawArrays(GL_TRIANGLE_FAN,
-                 PositionStartIndex,
-                 sizeof(vertices) / sizeof(vertices[0]));
+    glDrawElements(GL_TRIANGLE_FAN,
+                   sizeof(indices) / sizeof(indices[0]),
+                   GL_UNSIGNED_BYTE,
+                   indices);
     
 }
 
@@ -523,9 +524,9 @@ static inline RGBAColor RGBAColorMake(CGFloat red, CGFloat green, CGFloat blue, 
                                                  self.renderBufferSize.height)];
     
     // 6. Attach VAOs Or VBOs
-    [self attachTriangleVertexArrays];
+    [self attachCubeVertexArrays];
     
-    // 7. Draw Triangle
+    // 7. Draw Cube
     [self userShaderWithProgramID:programID];
     
     GLKMatrix4 modelViewMat4 = GLKMatrix4Multiply([self modelTransforms], [self viewTransforms]);
@@ -547,7 +548,7 @@ static inline RGBAColor RGBAColorMake(CGFloat red, CGFloat green, CGFloat blue, 
 //        
 //    }
     
-    [self drawTriangle];
+    [self drawCube];
     
     [self render];
     
