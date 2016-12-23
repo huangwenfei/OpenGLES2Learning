@@ -34,6 +34,8 @@ typedef NS_ENUM(NSUInteger, VFDrawableDepthMode) {
 
 @property (assign, nonatomic) VFDrawableDepthMode depthMode;
 
+@property (assign, nonatomic) GLuint programID;
+
 @property (assign, nonatomic) GLint projectionLoc, modelViewLoc;
 @end
 
@@ -453,8 +455,7 @@ static inline RGBAColor RGBAColorMake(CGFloat red, CGFloat green, CGFloat blue, 
 
 #pragma mark - Layout Views
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
+- (void)prepareDisplay {
     
     // 1. Context
     [self settingContext];
@@ -505,44 +506,48 @@ static inline RGBAColor RGBAColorMake(CGFloat red, CGFloat green, CGFloat blue, 
     GLuint fragmentShaderID = [self createShaderWithType:GL_FRAGMENT_SHADER];
     [self compileVertexShaderWithShaderID:fragmentShaderID type:GL_FRAGMENT_SHADER];
     
-    GLuint programID = [self createShaderProgram];
-    [self attachShaderToProgram:programID
+    self.programID = [self createShaderProgram];
+    [self attachShaderToProgram:_programID
                   vertextShader:vertexShaderID
                  fragmentShader:fragmentShaderID];
     
-    [self linkProgramWithProgramID:programID];
+    [self linkProgramWithProgramID:_programID];
     
-    [self updateUniformsLocationsWithProgramID:programID];
+    [self updateUniformsLocationsWithProgramID:_programID];
     
     // 4. Attach VAOs Or VBOs
     [self attachCubeVertexArrays];
     
+}
+
+- (void)drawAndRender {
+    
     // 5. Draw Cube
     // 5.0 使用 Shader
-    [self userShaderWithProgramID:programID];
+    [self userShaderWithProgramID:_programID];
     
     // 5.1
     // 第一次变换，modelTransform [模型空间 --> 世界空间]
     // 第二次变换，viewTransform  [世界空间 --> 摄像机空间]
     GLKMatrix4 modelViewMat4 = GLKMatrix4Multiply([self modelTransforms], [self viewTransforms]);
     [self setModelViewMat4:modelViewMat4];
-//    NSLog(@"modelViewMat4 = %@", NSStringFromGLKMatrix4(modelViewMat4));
+    //    NSLog(@"modelViewMat4 = %@", NSStringFromGLKMatrix4(modelViewMat4));
     
     // 5.2 第三次变换，projectionTransforms [摄像机空间 --> 裁剪空间]
     GLKMatrix4 projectionMat4 = [self projectionTransforms];
     [self setProjectionMat4:projectionMat4];
-//    NSLog(@"projectionMat4 = %@", NSStringFromGLKMatrix4(projectionMat4));
+    //    NSLog(@"projectionMat4 = %@", NSStringFromGLKMatrix4(projectionMat4));
     
     // Test Start
 //    GLKMatrix4 modelViewProjectionMat4 = GLKMatrix4Multiply(modelViewMat4, projectionMat4);
 //    NSLog(@"modelViewProjectionMat4 = %@", NSStringFromGLKMatrix4(modelViewProjectionMat4));
-//    
+//
 //    for (NSUInteger i = 0; i < 4; i++) {
-//        
+//
 //        GLKVector4 positionV = GLKVector4Make(vertices[i].position[0], vertices[i].position[1], vertices[i].position[2], 1.0);
 //        GLKVector4 position  = GLKMatrix4MultiplyVector4(modelViewProjectionMat4, positionV);
 //        NSLog(@"position = %@", NSStringFromGLKVector4(position));
-//        
+//
 //    }
     // Test End
     
@@ -561,6 +566,11 @@ static inline RGBAColor RGBAColorMake(CGFloat red, CGFloat green, CGFloat blue, 
     
     // 5.6 渲染图形
     [self render];
+    
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
     
 }
 

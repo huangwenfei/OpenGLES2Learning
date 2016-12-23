@@ -17,6 +17,9 @@ typedef NS_ENUM(NSUInteger, VertexDataMode) {
 
 - (void)setVertexMode:(VertexDataMode)vertexMode;
 
+- (void)prepareDisplay;
+- (void)drawAndRender;
+
 - (void)updateContentsWithSeconds:(NSTimeInterval)seconds;
 
 @end

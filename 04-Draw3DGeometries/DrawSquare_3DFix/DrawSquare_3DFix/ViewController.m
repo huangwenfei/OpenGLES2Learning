@@ -23,6 +23,10 @@
     CGRect rect = CGRectOffset(self.view.frame, 0, 0);
     VFGLSquareView *glView = [[VFGLSquareView alloc] initWithFrame:rect];
     [glView setVertexMode:VertexDataMode_VBO];
+    
+    [glView prepareDisplay];
+    [glView drawAndRender];
+    
     [glView updateContentsWithSeconds:2];
     
     [self.view addSubview:glView];
