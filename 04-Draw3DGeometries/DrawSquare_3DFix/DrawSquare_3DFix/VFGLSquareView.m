@@ -514,29 +514,26 @@ static inline RGBAColor RGBAColorMake(CGFloat red, CGFloat green, CGFloat blue, 
     
     [self updateUniformsLocationsWithProgramID:programID];
     
-    // 4. Clear
-    [self clearRenderBuffer];
-    
-    // 5. View Port
-    [self setRenderViewPortWithCGRect:CGRectMake(OpenGLES_OriginX,
-                                                 OpenGLES_OriginY,
-                                                 self.renderBufferSize.width,
-                                                 self.renderBufferSize.height)];
-    
-    // 6. Attach VAOs Or VBOs
+    // 4. Attach VAOs Or VBOs
     [self attachCubeVertexArrays];
     
-    // 7. Draw Cube
+    // 5. Draw Cube
+    // 5.0 使用 Shader
     [self userShaderWithProgramID:programID];
     
+    // 5.1
+    // 第一次变换，modelTransform [模型空间 --> 世界空间]
+    // 第二次变换，viewTransform  [世界空间 --> 摄像机空间]
     GLKMatrix4 modelViewMat4 = GLKMatrix4Multiply([self modelTransforms], [self viewTransforms]);
     [self setModelViewMat4:modelViewMat4];
 //    NSLog(@"modelViewMat4 = %@", NSStringFromGLKMatrix4(modelViewMat4));
     
+    // 5.2 第三次变换，projectionTransforms [摄像机空间 --> 裁剪空间]
     GLKMatrix4 projectionMat4 = [self projectionTransforms];
     [self setProjectionMat4:projectionMat4];
 //    NSLog(@"projectionMat4 = %@", NSStringFromGLKMatrix4(projectionMat4));
-//    
+    
+    // Test Start
 //    GLKMatrix4 modelViewProjectionMat4 = GLKMatrix4Multiply(modelViewMat4, projectionMat4);
 //    NSLog(@"modelViewProjectionMat4 = %@", NSStringFromGLKMatrix4(modelViewProjectionMat4));
 //    
@@ -547,9 +544,22 @@ static inline RGBAColor RGBAColorMake(CGFloat red, CGFloat green, CGFloat blue, 
 //        NSLog(@"position = %@", NSStringFromGLKVector4(position));
 //        
 //    }
+    // Test End
     
+    // 5.3 Clear
+    [self clearRenderBuffer];
+    
+    // 5.4 View Port
+    // 第四次变换，viewportTransforms [裁剪空间 --> 屏幕空间]
+    [self setRenderViewPortWithCGRect:CGRectMake(OpenGLES_OriginX,
+                                                 OpenGLES_OriginY,
+                                                 self.renderBufferSize.width,
+                                                 self.renderBufferSize.height)];
+    
+    // 5.5 绘制图形
     [self drawCube];
     
+    // 5.6 渲染图形
     [self render];
     
 }
