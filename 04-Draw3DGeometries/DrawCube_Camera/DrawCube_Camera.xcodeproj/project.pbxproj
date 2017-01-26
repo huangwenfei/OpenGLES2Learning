@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		238A0D201E32FCCF000A213A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 238A0D1F1E32FCCF000A213A /* main.m */; };
+		238A0D231E32FCCF000A213A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 238A0D221E32FCCF000A213A /* AppDelegate.m */; };
+		238A0D261E32FCCF000A213A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 238A0D251E32FCCF000A213A /* ViewController.m */; };
+		238A0D291E32FCCF000A213A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238A0D271E32FCCF000A213A /* Main.storyboard */; };
+		238A0D2B1E32FCCF000A213A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 238A0D2A1E32FCCF000A213A /* Assets.xcassets */; };
+		238A0D2E1E32FCCF000A213A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238A0D2C1E32FCCF000A213A /* LaunchScreen.storyboard */; };
+		238A0D401E32FD12000A213A /* VFRedisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 238A0D381E32FD12000A213A /* VFRedisplay.m */; };
+		238A0D411E32FD12000A213A /* FragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 238A0D3A1E32FD12000A213A /* FragmentShader.glsl */; };
+		238A0D421E32FD12000A213A /* VertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 238A0D3B1E32FD12000A213A /* VertexShader.glsl */; };
+		238A0D431E32FD12000A213A /* VFDrawCubeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 238A0D3F1E32FD12000A213A /* VFDrawCubeView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		238A0D1B1E32FCCF000A213A /* DrawCube_Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawCube_Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		238A0D1F1E32FCCF000A213A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		238A0D211E32FCCF000A213A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		238A0D221E32FCCF000A213A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		238A0D241E32FCCF000A213A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		238A0D251E32FCCF000A213A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		238A0D281E32FCCF000A213A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		238A0D2A1E32FCCF000A213A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		238A0D2D1E32FCCF000A213A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		238A0D2F1E32FCCF000A213A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		238A0D371E32FD12000A213A /* VFRedisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFRedisplay.h; sourceTree = "<group>"; };
+		238A0D381E32FD12000A213A /* VFRedisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFRedisplay.m; sourceTree = "<group>"; };
+		238A0D3A1E32FD12000A213A /* FragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FragmentShader.glsl; sourceTree = "<group>"; };
+		238A0D3B1E32FD12000A213A /* VertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VertexShader.glsl; sourceTree = "<group>"; };
+		238A0D3E1E32FD12000A213A /* VFDrawCubeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFDrawCubeView.h; sourceTree = "<group>"; };
+		238A0D3F1E32FD12000A213A /* VFDrawCubeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VFDrawCubeView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		238A0D181E32FCCF000A213A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		238A0D121E32FCCF000A213A = {
+			isa = PBXGroup;
+			children = (
+				238A0D1D1E32FCCF000A213A /* DrawCube_Camera */,
+				238A0D1C1E32FCCF000A213A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		238A0D1C1E32FCCF000A213A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				238A0D1B1E32FCCF000A213A /* DrawCube_Camera.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		238A0D1D1E32FCCF000A213A /* DrawCube_Camera */ = {
+			isa = PBXGroup;
+			children = (
+				238A0D351E32FD12000A213A /* Class */,
+				238A0D241E32FCCF000A213A /* ViewController.h */,
+				238A0D251E32FCCF000A213A /* ViewController.m */,
+				238A0D1E1E32FCCF000A213A /* Supporting Files */,
+			);
+			path = DrawCube_Camera;
+			sourceTree = "<group>";
+		};
+		238A0D1E1E32FCCF000A213A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				238A0D211E32FCCF000A213A /* AppDelegate.h */,
+				238A0D221E32FCCF000A213A /* AppDelegate.m */,
+				238A0D271E32FCCF000A213A /* Main.storyboard */,
+				238A0D2A1E32FCCF000A213A /* Assets.xcassets */,
+				238A0D2C1E32FCCF000A213A /* LaunchScreen.storyboard */,
+				238A0D2F1E32FCCF000A213A /* Info.plist */,
+				238A0D1F1E32FCCF000A213A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		238A0D351E32FD12000A213A /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				238A0D361E32FD12000A213A /* Display */,
+				238A0D391E32FD12000A213A /* Shader */,
+				238A0D3E1E32FD12000A213A /* VFDrawCubeView.h */,
+				238A0D3F1E32FD12000A213A /* VFDrawCubeView.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		238A0D361E32FD12000A213A /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				238A0D371E32FD12000A213A /* VFRedisplay.h */,
+				238A0D381E32FD12000A213A /* VFRedisplay.m */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		238A0D391E32FD12000A213A /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				238A0D3B1E32FD12000A213A /* VertexShader.glsl */,
+				238A0D3A1E32FD12000A213A /* FragmentShader.glsl */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		238A0D1A1E32FCCF000A213A /* DrawCube_Camera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 238A0D321E32FCCF000A213A /* Build configuration list for PBXNativeTarget "DrawCube_Camera" */;
+			buildPhases = (
+				238A0D171E32FCCF000A213A /* Sources */,
+				238A0D181E32FCCF000A213A /* Frameworks */,
+				238A0D191E32FCCF000A213A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrawCube_Camera;
+			productName = DrawCube_Camera;
+			productReference = 238A0D1B1E32FCCF000A213A /* DrawCube_Camera.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		238A0D131E32FCCF000A213A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = windy;
+				TargetAttributes = {
+					238A0D1A1E32FCCF000A213A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 238A0D161E32FCCF000A213A /* Build configuration list for PBXProject "DrawCube_Camera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 238A0D121E32FCCF000A213A;
+			productRefGroup = 238A0D1C1E32FCCF000A213A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				238A0D1A1E32FCCF000A213A /* DrawCube_Camera */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		238A0D191E32FCCF000A213A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238A0D2E1E32FCCF000A213A /* LaunchScreen.storyboard in Resources */,
+				238A0D2B1E32FCCF000A213A /* Assets.xcassets in Resources */,
+				238A0D421E32FD12000A213A /* VertexShader.glsl in Resources */,
+				238A0D411E32FD12000A213A /* FragmentShader.glsl in Resources */,
+				238A0D291E32FCCF000A213A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		238A0D171E32FCCF000A213A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238A0D261E32FCCF000A213A /* ViewController.m in Sources */,
+				238A0D431E32FD12000A213A /* VFDrawCubeView.m in Sources */,
+				238A0D401E32FD12000A213A /* VFRedisplay.m in Sources */,
+				238A0D231E32FCCF000A213A /* AppDelegate.m in Sources */,
+				238A0D201E32FCCF000A213A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		238A0D271E32FCCF000A213A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				238A0D281E32FCCF000A213A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		238A0D2C1E32FCCF000A213A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				238A0D2D1E32FCCF000A213A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		238A0D301E32FCCF000A213A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		238A0D311E32FCCF000A213A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		238A0D331E32FCCF000A213A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DrawCube_Camera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windy.DrawCube-Camera";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		238A0D341E32FCCF000A213A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DrawCube_Camera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windy.DrawCube-Camera";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		238A0D161E32FCCF000A213A /* Build configuration list for PBXProject "DrawCube_Camera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238A0D301E32FCCF000A213A /* Debug */,
+				238A0D311E32FCCF000A213A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		238A0D321E32FCCF000A213A /* Build configuration list for PBXNativeTarget "DrawCube_Camera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				238A0D331E32FCCF000A213A /* Debug */,
+				238A0D341E32FCCF000A213A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 238A0D131E32FCCF000A213A /* Project object */;
+}
