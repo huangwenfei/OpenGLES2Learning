@@ -114,40 +114,66 @@
 - (void)settingDefault {
     self.currentKey = [[VYSwitchKey alloc] init];
     self.currentTransforms = self.oldTransforms = [[VYTransforms alloc] init];
+    [self setDefaultTransforms];
     self.loadTexture = [[VYLoadTextureImage alloc] init];
 }
 
 #pragma mark - Transforms
 
+- (void)setDefaultTransforms {
+    
+    VYTransforms *trans = self.currentTransforms;
+    // Model Transform
+    trans.modelTransform = VYSTTransformMake(trans.PositionVec3Make(0, 0, 0),
+                                             trans.RotationVec3Make(0, 0, 0),
+                                             trans.ScalingVec3Make(1, 1, 1));
+    
+    // View Transform
+    trans.viewTransform = VYSTTransformMake(trans.PositionVec3Make(0, 0, 0),
+                                            trans.RotationVec3Make(0, 0, 0),
+                                            trans.ScalingVec3Make(1, 1, 1));
+    
+    // Projection Transform
+    // LookAt
+    trans.lookAt = VYLookAtMake(trans.EyeVec3Make(0, 0, 0),
+                                trans.CenterVec3Make(0, 0, -1),
+                                trans.UpVec3Make(0, 1, 0));
+    
+    trans.aspectRadio = (self.bounds.size.width / self.bounds.size.height);
+    trans.perspectiveProj = VYPerspectivePerspectiveMake(GLKMathDegreesToRadians(85.0),
+                                                         trans.aspectRadio,
+                                                         1, 150);
+    
+}
+
 - (void)setTransformsWithProgram:(GLuint)programObject {
+    
+    BOOL square = (self.currentKey.squareCubeSwitch == Square);
+    BOOL cube   = !square;
     
     GLuint modelViewLoc = glGetUniformLocation(programObject, "u_modelViewMat4");
     GLuint projectionLoc = glGetUniformLocation(programObject, "u_projectionMat4");
     
     VYTransforms *trans = self.currentTransforms;
     // Model Transform
-    trans.modelTransform = VYSTTransformMake(trans.PositionVec3Make(0, 0.5, -3),
-                                             trans.RotationVec3Make(0, 0, 0),
-                                             trans.ScalingVec3Make(1, 1, 1));
+    if ( square ) {
+        trans.modelTransform = VYSTTransformSetPosition(trans.modelTransform, trans.PositionVec3Make(0, 0.5, -3));
+    }
+    
+    if ( cube ) {
+        trans.modelTransform = VYSTTransformSetPosition(trans.modelTransform, trans.PositionVec3Make(0, 0.5, -5));
+    }
+    
     trans.modelTransformMat4 = VYSTTransformMat4Make(trans.modelTransform);
     
     // View Transform
-    trans.viewTransform = VYSTTransformMake(trans.PositionVec3Make(0, 0, 0),
-                                            trans.RotationVec3Make(0, 0, 0),
-                                            trans.ScalingVec3Make(1, 1, 1));
     trans.viewTransformMat4 = VYSTTransformMat4Make(trans.viewTransform);
     
     // Projection Transform
-    trans.aspectRadio = (self.bounds.size.width / self.bounds.size.height);
-    trans.lookAt = VYLookAtMake(trans.EyeVec3Make(0, 0, 0),
-                                trans.CenterVec3Make(0, 0, -1),
-                                trans.UpVec3Make(0, 1, 0));
+    // LookAt
     trans.lookAtMat4 = VYLookAtMat4Make(trans.lookAt);
     
     // 使用透视投影
-    trans.perspectiveProj = VYPerspectivePerspectiveMake(GLKMathDegreesToRadians(85.0),
-                                                         trans.aspectRadio,
-                                                         1, 150);
     trans.perspectiveProjMat4 = VYPerspectivePerspectiveMat4Make(trans.perspectiveProj);
     
     trans.baseCamera = VYCameraMake(trans.lookAtMat4,
@@ -285,6 +311,15 @@ typedef void (^ReleaseBlock)(void);
 
 - (void)layoutSubviews {
     
+    //MARK: Switch Keys
+    BOOL square = (self.currentKey.squareCubeSwitch == Square);
+    BOOL cube   = !square;
+    
+    if ( square ) {
+        self.currentKey.tex2DCubeMapSwitch = Texture2D;
+    }
+    
+    //MARK: EAGLLayer
     CAEAGLLayer *glLayer = (CAEAGLLayer *)self.layer;
     if ( ! [glLayer isKindOfClass:[CAEAGLLayer class]] ) {
         NSLog(@"Error : 错误的 Layer !");
@@ -311,9 +346,6 @@ typedef void (^ReleaseBlock)(void);
 
     //ERROR: 原来是这里写错了，真难排查 “GL_RENDERBUFFER 写成了 colorRenderbuffer”
     [context renderbufferStorage:GL_RENDERBUFFER fromDrawable:glLayer];
-    
-    BOOL square = (self.currentKey.squareCubeSwitch == Square);
-    BOOL cube   = !square;
     
     //MARK: FrameBuffer
     GLuint framebuffer = 0;
@@ -376,8 +408,8 @@ typedef void (^ReleaseBlock)(void);
     const GLvoid* data =  square ? tex2DSquareDatas : tex2DCubeDatas;
     glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW);
     
-    GLsizeiptr elementSize = square ? sizeof(squareIndices) : sizeof(cubeIndices);
-    const GLvoid* elementData = square ? squareIndices : cubeIndices;
+    GLsizeiptr elementSize = square ? sizeof(squareIndices) : sizeof(texCubeIndices);
+    const GLvoid* elementData = square ? squareIndices : texCubeIndices;
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, elementSize, elementData, GL_STATIC_DRAW);
     
     //MARK: Shader Program
@@ -481,7 +513,7 @@ typedef void (^ReleaseBlock)(void);
     [self setTransformsWithProgram:programObject];
     [self setTextureWithProgram:programObject texture:texture texMode:texMode];
     
-    GLsizeiptr eachElementSize = square ? sizeof(squareIndices[0]) : sizeof(cubeIndices[0]);
+    GLsizeiptr eachElementSize = square ? sizeof(squareIndices[0]) : sizeof(texCubeIndices[0]);
     glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
     glDrawElements(GL_TRIANGLES, (GLint)(elementSize / eachElementSize), GL_UNSIGNED_BYTE, elementData);
     
@@ -510,6 +542,8 @@ typedef void (^ReleaseBlock)(void);
     
     [self.displayLoop startUpdate];
     
+    self.currentTransforms.modelUpdate = YES;
+    
 }
 
 - (void)pauseUpdate {
@@ -522,12 +556,30 @@ typedef void (^ReleaseBlock)(void);
 
 - (void)preferTransformsWithTimes:(NSTimeInterval)time {
     
-//    NSLog(@"time : %f", time);
+    VYTransforms *trans = self.currentTransforms;
+    VYSTTransform modelTrans = trans.modelTransform;
+    
+    GLKVector3 modelRtate = modelTrans.rotation;
+    
+    GLfloat rotateX = modelRtate.x;
+//    rotateX += M_PI_4 * time;
+    
+    GLfloat rotateY = modelRtate.y;
+    rotateY += M_PI_2 * time;
+    
+    GLfloat rotateZ = modelRtate.z;
+    rotateZ += M_PI_2 * time;
+    
+    trans.modelTransform = VYSTTransformSetRotation(modelTrans, trans.RotationVec3Make(rotateX, rotateY, rotateZ));
     
 }
 
 // Redisplay Contents Step 2
 - (void)updateContents {
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(realTimeUpdateContents)]) {
+        [self.delegate realTimeUpdateContents];
+    }
     
     [self preferTransformsWithTimes:self.displayLoop.timeSinceLastUpdate];
     [self layoutSubviews];

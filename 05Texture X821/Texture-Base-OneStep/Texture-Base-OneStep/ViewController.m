@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "VYTextureView.h"
 
-@interface ViewController ()
+@interface ViewController () <VYTextureViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *square_Cube_SegCon;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tex2D_CubeMap_SegCon;
@@ -28,6 +28,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.texView = [[VYTextureView alloc] initWithFrame:self.view.bounds];
+    self.texView.delegate = self;
+    
+    [self dealingTex2DSegCon];
     
     NSArray<UISegmentedControl *> *segments = @[self.square_Cube_SegCon, self.tex2D_CubeMap_SegCon,
                                                 self.pixels_Image_SegCon, self.elongated_Conformal_SegCon,
@@ -51,11 +54,34 @@
 
 #pragma mark - SegCon Actions
 
+- (void)dealingTex2DSegCon {
+    NSString *segmentTitle = @"TextureCubemap";
+    NSUInteger segmentIndex = 1;
+    if (self.texView.currentKey.squareCubeSwitch == Square) {
+        [self.tex2D_CubeMap_SegCon removeSegmentAtIndex:segmentIndex animated:YES];
+    } else {
+        [self.tex2D_CubeMap_SegCon insertSegmentWithTitle:segmentTitle atIndex:segmentIndex animated:YES];
+    }
+}
+
 - (IBAction)squareCubeSwitchAction:(UISegmentedControl *)sender {
+    
     self.texView.currentKey.squareCubeSwitch = (VYSquareCubeKey)sender.selectedSegmentIndex;
+    [self dealingTex2DSegCon];
+    
 }
 - (IBAction)tex2DCubeMapSwitchAction:(UISegmentedControl *)sender {
+    
     self.texView.currentKey.tex2DCubeMapSwitch = (VYTexture2DCubemapKey)sender.selectedSegmentIndex;
+    
+    NSString *segmentTitle = @"长方图";
+    NSUInteger segmentIndex = 0;
+    if (self.texView.currentKey.squareCubeSwitch == Square) {
+        [self.tex2D_CubeMap_SegCon removeSegmentAtIndex:segmentIndex animated:YES];
+    } else {
+        [self.tex2D_CubeMap_SegCon insertSegmentWithTitle:segmentTitle atIndex:segmentIndex animated:YES];
+    }
+    
 }
 - (IBAction)pixelsImageSwitchAction:(UISegmentedControl *)sender {
     self.texView.currentKey.pixelsImageSwitch = (VYPixelImageKey)sender.selectedSegmentIndex;
@@ -95,6 +121,28 @@
     [super viewWillDisappear:animated];
     
     [self.texView pauseUpdate];
+    
+}
+
+#pragma mark - <VYTextureViewDelegate>
+
+- (void)realTimeUpdateContents {
+    
+    if (self.texView.currentKey.pixelsImageSwitch == Image) {
+        
+        self.imageSource_SegCon.enabled = YES;
+        
+        if (self.texView.currentKey.tex2DCubeMapSwitch == Texture2D &&
+            self.texView.currentKey.squareCubeSwitch == Cube) {
+            
+            self.elongated_Conformal_SegCon.enabled = YES;
+        } else {
+            self.elongated_Conformal_SegCon.enabled = NO;
+        }
+        
+    } else {
+        self.imageSource_SegCon.enabled = NO;
+    }
     
 }
 

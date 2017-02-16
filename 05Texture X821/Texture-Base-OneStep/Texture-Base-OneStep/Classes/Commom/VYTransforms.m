@@ -20,12 +20,17 @@
 - (void)settingDefault {
     
     self.PositionVec3Make   = GLKVector3Make;
-    self.RotationVec3Make     = self.PositionVec3Make;
-    self.ScalingVec3Make      = self.PositionVec3Make;
+    self.RotationVec3Make   = self.PositionVec3Make;
+    self.ScalingVec3Make    = self.PositionVec3Make;
     
     self.EyeVec3Make        = self.PositionVec3Make;
     self.CenterVec3Make     = self.PositionVec3Make;
     self.UpVec3Make         = self.PositionVec3Make;
+    
+    self.modelUpdate        = NO;
+    self.viewUpdate         = self.modelUpdate;
+    self.lookAtUpdate       = self.modelUpdate;
+    self.projectionUpdate   = self.modelUpdate;
     
 }
 

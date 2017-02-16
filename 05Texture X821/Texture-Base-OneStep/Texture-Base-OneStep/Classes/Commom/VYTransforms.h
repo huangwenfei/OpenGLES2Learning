@@ -33,6 +33,18 @@ GLK_INLINE VYSTTransform VYSTTransformMake(GLKVector3 posi, GLKVector3 rota, GLK
     return sttr;
 }
 
+GLK_INLINE VYSTTransform VYSTTransformSetPosition(VYSTTransform sttr, GLKVector3 newPosition) {
+    return VYSTTransformMake(newPosition, sttr.rotation, sttr.scale);
+}
+
+GLK_INLINE VYSTTransform VYSTTransformSetRotation(VYSTTransform sttr, GLKVector3 newRotation) {
+    return VYSTTransformMake(sttr.position, newRotation, sttr.scale);
+}
+
+GLK_INLINE VYSTTransform VYSTTransformSetScaling(VYSTTransform sttr, GLKVector3 newScaling) {
+    return VYSTTransformMake(sttr.position, sttr.rotation, newScaling);
+}
+
 GLK_INLINE GLKMatrix4 VYSTTransformMat4Make(VYSTTransform sttr) {
     
     GLKMatrix4 mat4 = GLKMatrix4Identity;
@@ -63,6 +75,18 @@ GLK_INLINE VYLookAt VYLookAtMake(GLKVector3 eyeV, GLKVector3 cenV, GLKVector3 up
         .upVector       = upV,
     };
     return look;
+}
+
+GLK_INLINE VYLookAt VYLookAtEyeV(VYLookAt lookAt, GLKVector3 newEyeV) {
+    return VYLookAtMake(newEyeV, lookAt.centerVector, lookAt.upVector);
+}
+
+GLK_INLINE VYLookAt VYLookAtCenterV(VYLookAt lookAt, GLKVector3 newCenterV) {
+    return VYLookAtMake(lookAt.eyeVector, newCenterV, lookAt.upVector);
+}
+
+GLK_INLINE VYLookAt VYLookAtUpV(VYLookAt lookAt, GLKVector3 newUpV) {
+    return VYLookAtMake(lookAt.eyeVector, lookAt.centerVector, newUpV);
 }
 
 GLK_INLINE GLKMatrix4 VYLookAtMat4Make(VYLookAt lookAt) {
@@ -274,33 +298,55 @@ GLK_INLINE GLKMatrix4 VYMVPTransformMat4Make(VYMVPTransform mvp) {
 @property (assign, nonatomic) float aspectRadio;
 
 /**
- *  Model + View + Camera
+ *  Model + View + Camera GLKMat4
  */
 @property (assign, nonatomic) GLKMatrix4     mvpTransformMat4;
+// Model + View + Camera Struct
 @property (assign, nonatomic) VYMVPTransform mvpTransfrom;
 
 /**
  *  模型变换
  */
+// 是否启用了外部 Model 更新[有新的实时数据]
+@property (assign, nonatomic) BOOL modelUpdate;
+// 模型变换 GLKMat4
 @property (assign, nonatomic) GLKMatrix4    modelTransformMat4;
+// 模型变换 Struct
 @property (assign, nonatomic) VYSTTransform modelTransform;
 /**
  *  视变换
  */
+// 是否启用了外部 View 更新[有新的实时数据]
+@property (assign, nonatomic) BOOL viewUpdate;
+// 视变换 GLKMat4
 @property (assign, nonatomic) GLKMatrix4    viewTransformMat4;
+// 视变换 Struct
 @property (assign, nonatomic) VYSTTransform viewTransform;
 
 /**
  *  投影变换
  */
+// 基础摄像机 GLKMat4
 @property (assign, nonatomic) GLKMatrix4        baseCameraMat4;
+// 基础摄像机 Struct
 @property (assign, nonatomic) VYCamera          baseCamera;
 
+// 是否启用了外部 LookAt 更新[有新的实时数据]
+@property (assign, nonatomic) BOOL lookAtUpdate;
+// 摄像机观察 GLKMat4
 @property (assign, nonatomic) GLKMatrix4        lookAtMat4;
+// 摄像机观察 Struct
 @property (assign, nonatomic) VYLookAt          lookAt;
+
+// 是否启用了外部 Projection 更新[有新的实时数据]
+@property (assign, nonatomic) BOOL projectionUpdate;
+// 摄像机透视投影区域 GLKMat4
 @property (assign, nonatomic) GLKMatrix4        perspectiveProjMat4;
+// 摄像机透视投影区域 Struct
 @property (assign, nonatomic) VYPerspectiveProj perspectiveProj;
+// 摄像机正交[平行]投影区域 GLKMat4
 @property (assign, nonatomic) GLKMatrix4        orthoProjMat4;
+// 摄像机正交[平行]投影区域 Struct
 @property (assign, nonatomic) VYOrthoProj       orthoProj;
 
 /**

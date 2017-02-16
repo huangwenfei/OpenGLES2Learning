@@ -66,8 +66,17 @@ typedef NS_ENUM(int, VYImageSourceKey) {
 
 #import "VYDisplayLoop.h"
 
+typedef void (^UpdateUIsBlock)(void);
+
+@protocol VYTextureViewDelegate <NSObject>
+
+- (void)realTimeUpdateContents;
+
+@end
+
 @interface VYTextureView : UIView
 
+@property (weak  , nonatomic) id<VYTextureViewDelegate> delegate;
 @property (strong, nonatomic) VYSwitchKey *currentKey;
 @property (strong, nonatomic) VYDisplayLoop *displayLoop;
 
