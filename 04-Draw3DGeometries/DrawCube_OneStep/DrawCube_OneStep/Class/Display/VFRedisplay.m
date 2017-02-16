@@ -59,30 +59,6 @@ static const BOOL kDefaultDisplayPause = NO;
     
 }
 
-- (NSTimeInterval)timeSinceFirstResume {
-    
-    return 0;
-    
-}
-
-- (NSTimeInterval)timeSinceLastResume {
-    
-    return 0;
-    
-}
-
-- (NSTimeInterval)timeSinceLastUpdate {
-    
-    return 0;
-    
-}
-
-- (NSTimeInterval)timeSinceLastDraw {
-    
-    return 0;
-    
-}
-
 #pragma mark - Init
 
 - (instancetype)initWithUpdateTimes:(NSTimeInterval)updateContentTimes
@@ -157,7 +133,20 @@ static const BOOL kDefaultDisplayPause = NO;
 
 - (void)displayContents:(CADisplayLink *)sender {
     
+    NSTimeInterval newTime = self.displayLink.timestamp;
+    
+    if (self.timeSinceFirstResume == 0) {
+        self.timeSinceFirstResume = newTime;
+    }
+    self.timeSinceLastUpdate  = newTime - self.timeSinceFirstResume;
+    self.timeSinceFirstResume = newTime;
+
     if ([self.delegate respondsToSelector:@selector(updateContentsWithTimes:)]) {
+        
+        NSLog(@"duration: %f; timestamp: %f; LastUpdate: %f; targetTimestamp: %f",
+              self.displayLink.duration,self.displayLink.timestamp,
+              self.timeSinceLastUpdate, self.displayLink.targetTimestamp);
+        NSLog(@"----------------------------------------------------------------------------------------");
         
         [self.delegate updateContentsWithTimes:self.updateContentTimes];
         
