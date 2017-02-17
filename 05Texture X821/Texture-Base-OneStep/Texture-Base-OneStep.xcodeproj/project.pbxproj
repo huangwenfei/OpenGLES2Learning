@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		23303C5D1E5488E9007F82EF /* VYDisplayLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 23303C5C1E5488E9007F82EF /* VYDisplayLoop.m */; };
+		2332C2C71E55F25F009D0512 /* L_768_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332C2BE1E55F25F009D0512 /* L_768_512.png */; };
+		2332C2C81E55F25F009D0512 /* Rubik's cube.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332C2BF1E55F25F009D0512 /* Rubik's cube.png */; };
+		2332C2C91E55F25F009D0512 /* 512_512_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332C2C11E55F25F009D0512 /* 512_512_01.png */; };
+		2332C2CA1E55F25F009D0512 /* 512_512_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332C2C21E55F25F009D0512 /* 512_512_02.png */; };
+		2332C2CB1E55F25F009D0512 /* 512_512_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332C2C31E55F25F009D0512 /* 512_512_03.png */; };
+		2332C2CC1E55F25F009D0512 /* 512_512_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332C2C41E55F25F009D0512 /* 512_512_04.png */; };
+		2332C2CD1E55F25F009D0512 /* 512_512_05.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332C2C51E55F25F009D0512 /* 512_512_05.png */; };
+		2332C2CE1E55F25F009D0512 /* 512_512_06.png in Resources */ = {isa = PBXBuildFile; fileRef = 2332C2C61E55F25F009D0512 /* 512_512_06.png */; };
 		23444FFF1E5425AF004DD80C /* VYTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 23444FFE1E5425AF004DD80C /* VYTransforms.m */; };
 		2344503A1E544968004DD80C /* VYLoadTextureImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 234450391E544968004DD80C /* VYLoadTextureImage.m */; };
 		2344503C1E544DB7004DD80C /* 512_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 2344503B1E544DB7004DD80C /* 512_512.png */; };
@@ -22,11 +30,21 @@
 		23D7FF9A1E51E58400A8D769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D7FF991E51E58400A8D769 /* Assets.xcassets */; };
 		23D7FF9D1E51E58400A8D769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D7FF9B1E51E58400A8D769 /* LaunchScreen.storyboard */; };
 		23D7FFAB1E51E67600A8D769 /* VYTextureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D7FFAA1E51E67600A8D769 /* VYTextureView.m */; };
+		23DEBAB41E56E60C007BD664 /* 128_128.png in Resources */ = {isa = PBXBuildFile; fileRef = 23DEBAB31E56E60C007BD664 /* 128_128.png */; };
+		23DEBAB61E56F06B007BD664 /* HDR湖泊.png in Resources */ = {isa = PBXBuildFile; fileRef = 23DEBAB51E56F06B007BD664 /* HDR湖泊.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		23303C5B1E5488E9007F82EF /* VYDisplayLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VYDisplayLoop.h; sourceTree = "<group>"; };
 		23303C5C1E5488E9007F82EF /* VYDisplayLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VYDisplayLoop.m; sourceTree = "<group>"; };
+		2332C2BE1E55F25F009D0512 /* L_768_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_768_512.png; sourceTree = "<group>"; };
+		2332C2BF1E55F25F009D0512 /* Rubik's cube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rubik's cube.png"; sourceTree = "<group>"; };
+		2332C2C11E55F25F009D0512 /* 512_512_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512_01.png; sourceTree = "<group>"; };
+		2332C2C21E55F25F009D0512 /* 512_512_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512_02.png; sourceTree = "<group>"; };
+		2332C2C31E55F25F009D0512 /* 512_512_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512_03.png; sourceTree = "<group>"; };
+		2332C2C41E55F25F009D0512 /* 512_512_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512_04.png; sourceTree = "<group>"; };
+		2332C2C51E55F25F009D0512 /* 512_512_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512_05.png; sourceTree = "<group>"; };
+		2332C2C61E55F25F009D0512 /* 512_512_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512_06.png; sourceTree = "<group>"; };
 		23444FFD1E5425AF004DD80C /* VYTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VYTransforms.h; sourceTree = "<group>"; };
 		23444FFE1E5425AF004DD80C /* VYTransforms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VYTransforms.m; sourceTree = "<group>"; };
 		234450381E544968004DD80C /* VYLoadTextureImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VYLoadTextureImage.h; sourceTree = "<group>"; };
@@ -49,6 +67,8 @@
 		23D7FF9E1E51E58400A8D769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23D7FFA91E51E67600A8D769 /* VYTextureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VYTextureView.h; sourceTree = "<group>"; };
 		23D7FFAA1E51E67600A8D769 /* VYTextureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VYTextureView.m; sourceTree = "<group>"; };
+		23DEBAB31E56E60C007BD664 /* 128_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 128_128.png; sourceTree = "<group>"; };
+		23DEBAB51E56F06B007BD664 /* HDR湖泊.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HDR湖泊.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +82,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2332C2BD1E55F25F009D0512 /* 2DCubeElong */ = {
+			isa = PBXGroup;
+			children = (
+				23DEBAB51E56F06B007BD664 /* HDR湖泊.png */,
+				2332C2BE1E55F25F009D0512 /* L_768_512.png */,
+				2332C2BF1E55F25F009D0512 /* Rubik's cube.png */,
+			);
+			path = 2DCubeElong;
+			sourceTree = "<group>";
+		};
+		2332C2C01E55F25F009D0512 /* Cubemap */ = {
+			isa = PBXGroup;
+			children = (
+				23DEBAB01E56DC30007BD664 /* HDR */,
+				2332C2C11E55F25F009D0512 /* 512_512_01.png */,
+				2332C2C21E55F25F009D0512 /* 512_512_02.png */,
+				2332C2C31E55F25F009D0512 /* 512_512_03.png */,
+				2332C2C41E55F25F009D0512 /* 512_512_04.png */,
+				2332C2C51E55F25F009D0512 /* 512_512_05.png */,
+				2332C2C61E55F25F009D0512 /* 512_512_06.png */,
+			);
+			path = Cubemap;
+			sourceTree = "<group>";
+		};
 		23556E251E52A4A90002A050 /* Datas */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +194,10 @@
 		23D7FFA71E51E5E100A8D769 /* TextureSources */ = {
 			isa = PBXGroup;
 			children = (
+				2332C2BD1E55F25F009D0512 /* 2DCubeElong */,
+				2332C2C01E55F25F009D0512 /* Cubemap */,
 				2344503B1E544DB7004DD80C /* 512_512.png */,
+				23DEBAB31E56E60C007BD664 /* 128_128.png */,
 			);
 			path = TextureSources;
 			sourceTree = "<group>";
@@ -162,6 +209,13 @@
 				23D7FFAA1E51E67600A8D769 /* VYTextureView.m */,
 			);
 			path = MainClass;
+			sourceTree = "<group>";
+		};
+		23DEBAB01E56DC30007BD664 /* HDR */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HDR;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,13 +277,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				23D7FF9D1E51E58400A8D769 /* LaunchScreen.storyboard in Resources */,
+				2332C2CA1E55F25F009D0512 /* 512_512_02.png in Resources */,
+				2332C2C81E55F25F009D0512 /* Rubik's cube.png in Resources */,
+				2332C2C71E55F25F009D0512 /* L_768_512.png in Resources */,
+				23DEBAB61E56F06B007BD664 /* HDR湖泊.png in Resources */,
 				23D7FF9A1E51E58400A8D769 /* Assets.xcassets in Resources */,
+				2332C2CE1E55F25F009D0512 /* 512_512_06.png in Resources */,
 				23D7FF981E51E58400A8D769 /* Main.storyboard in Resources */,
 				23556E221E529AE40002A050 /* VYTexCubemapVertexShader.glsl in Resources */,
+				23DEBAB41E56E60C007BD664 /* 128_128.png in Resources */,
+				2332C2CC1E55F25F009D0512 /* 512_512_04.png in Resources */,
+				2332C2CB1E55F25F009D0512 /* 512_512_03.png in Resources */,
 				23556E1E1E529A780002A050 /* VYTex2DVertexShader.glsl in Resources */,
+				2332C2CD1E55F25F009D0512 /* 512_512_05.png in Resources */,
 				2344503C1E544DB7004DD80C /* 512_512.png in Resources */,
 				23556E201E529AD10002A050 /* VYTex2DFragmentShader.glsl in Resources */,
 				23556E241E529AF70002A050 /* VYTexCubemapFragmentShader.glsl in Resources */,
+				2332C2C91E55F25F009D0512 /* 512_512_01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

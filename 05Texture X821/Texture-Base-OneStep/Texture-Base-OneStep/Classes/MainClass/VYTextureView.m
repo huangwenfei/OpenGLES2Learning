@@ -196,15 +196,111 @@
     
     BOOL pixels = (self.currentKey.pixelsImageSwitch == Pixel);
     if (pixels) {
-        glTexImage2D(texMode, 0, GL_RGB, 2, 2, GL_FALSE, GL_RGB, GL_FLOAT, tex2DSquarePixelDatas);
+        
+        if (texMode == GL_TEXTURE_2D) {
+            glTexImage2D(texMode, 0, GL_RGB, 2, 2, GL_FALSE, GL_RGB, GL_FLOAT, tex2DPixelDatas);
+        } else {
+            
+//                glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X, 0, GL_RGB, 2, 2, GL_FALSE, GL_RGB, GL_FLOAT,  texCubemapPixelDatas[0]);
+//                glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_X, 0, GL_RGB, 2, 2, GL_FALSE, GL_RGB, GL_FLOAT,  texCubemapPixelDatas[1]);
+//                glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_Y, 0, GL_RGB, 2, 2, GL_FALSE, GL_RGB, GL_FLOAT,  texCubemapPixelDatas[2]);
+//                glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_Y, 0, GL_RGB, 2, 2, GL_FALSE, GL_RGB, GL_FLOAT,  texCubemapPixelDatas[3]);
+//                glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_Z, 0, GL_RGB, 2, 2, GL_FALSE, GL_RGB, GL_FLOAT,  texCubemapPixelDatas[4]);
+//                glTexImage2D(GL_TEXTURE_CUBE_MAP_NEGATIVE_Z, 0, GL_RGB, 2, 2, GL_FALSE, GL_RGB, GL_FLOAT,  texCubemapPixelDatas[5]);
+
+            GLenum target = GL_TEXTURE_CUBE_MAP_POSITIVE_X;
+            for (NSUInteger i = 0; i < 6; i++) {
+                glTexImage2D(target, 0, GL_RGB,
+                             2, 2, GL_FALSE, GL_RGB, GL_FLOAT,  texCubemapPixelDatas[i]);
+                target++;
+            }
+            
+        }
+        
     } else {
-        UIImage *_512_512 = [UIImage imageNamed:@"512_512"];
-        [self.loadTexture textureDataWithResizedCGImageBytes:_512_512.CGImage completion:^(NSData *imageData, size_t newWidth, size_t newHeight) {
-            glTexImage2D(texMode, 0, GL_RGBA,
-                         (GLsizei)newWidth, (GLsizei)newHeight,
-                         GL_FALSE, GL_RGBA, GL_UNSIGNED_BYTE,
-                         imageData.bytes);
-        }];
+        if (texMode == GL_TEXTURE_2D) {
+            
+            UIImage *img = [UIImage imageNamed:@"512_512"];
+            
+            BOOL square = (self.currentKey.squareCubeSwitch == Square);
+            if ( square ) {
+                
+                if ( self.currentKey.imageSourceSwitch == ImageSource_128_128 ) {
+                    img = [UIImage imageNamed:@"128_128"];
+                }
+                
+            } else {
+                switch ( self.currentKey.elongatedConformalSwitch ) {
+                    case Conformal:
+                        if ( self.currentKey.imageSourceSwitch == ImageSource_128_128 ) {
+                            img = [UIImage imageNamed:@"128_128"];
+                        }
+                        break;
+                        
+                    case Elongate_UD:
+                        switch ( self.currentKey.imageSourceSwitch ) {
+                            case ImageSource_Single_768_512_01:
+                                img = [UIImage imageNamed:@"HDR湖泊"];
+                                break;
+                                
+                            case ImageSource_Single_768_512_02:
+                                img = [UIImage imageNamed:@"L_768_512"];
+                                break;
+                                
+                            default:
+                                break;
+                        }
+                        break;
+                        
+                    case Elongate_DD:
+                        img = [UIImage imageNamed:@"Rubik's cube"];
+                        break;
+                        
+                    default:
+                        break;
+                }
+            }
+            
+            [self.loadTexture textureDataWithResizedCGImageBytes:img.CGImage completion:^(NSData *imageData, size_t newWidth, size_t newHeight) {
+                glTexImage2D(texMode, 0, GL_RGBA,
+                             (GLsizei)newWidth, (GLsizei)newHeight,
+                             GL_FALSE, GL_RGBA, GL_UNSIGNED_BYTE,
+                             imageData.bytes);
+            }];
+            
+        } else {
+            
+            NSArray<UIImage *> *imgs = nil;
+            
+            switch ( self.currentKey.imageSourceSwitch ) {
+                case ImageSource_Cubemap_512_512s:
+                    imgs = @[[UIImage imageNamed:@"512_512_01"],
+                             [UIImage imageNamed:@"512_512_02"],
+                             [UIImage imageNamed:@"512_512_03"],
+                             [UIImage imageNamed:@"512_512_04"],
+                             [UIImage imageNamed:@"512_512_05"],
+                             [UIImage imageNamed:@"512_512_06"]];
+                    break;
+                    
+                case ImageSource_Cubemap_HDR01:
+                    
+                    break;
+                    
+                default:
+                    break;
+            }
+            
+            GLenum target = GL_TEXTURE_CUBE_MAP_POSITIVE_X;
+            [self.loadTexture textureDatasWithResizedUIImages:imgs completion:^(NSArray<NSData *> *imageDatas, size_t newWidth, size_t newHeight) {
+                [imageDatas enumerateObjectsUsingBlock:^(NSData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    glTexImage2D((GLenum)(target + idx), 0, GL_RGBA,
+                                 (GLsizei)newWidth, (GLsizei)newHeight,
+                                 GL_FALSE, GL_RGBA, GL_UNSIGNED_BYTE,
+                                 obj.bytes);
+                }];
+            }];
+            
+        }
     }
     
     glTexParameteri(texMode, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
@@ -404,8 +500,34 @@ typedef void (^ReleaseBlock)(void);
     
     glBindBuffer(GL_ARRAY_BUFFER, bufferObject);
     
-    GLsizeiptr size = square ? sizeof(tex2DSquareDatas) : sizeof(tex2DCubeDatas);
-    const GLvoid* data =  square ? tex2DSquareDatas : tex2DCubeDatas;
+    BOOL texture2D = (self.currentKey.tex2DCubeMapSwitch == Texture2D);
+    
+//    GLsizeiptr size = square ? sizeof(tex2DSquareDatas) : sizeof(tex2DCubeDatas);
+//    const GLvoid* data =  square ? tex2DSquareDatas : (texture2D ? tex2DCubeDatas : texCubemapCubeDatas);
+    GLsizeiptr size = 0;
+    const GLvoid* data = NULL;
+    if ( square ) {
+        size = sizeof(tex2DSquareDatas);
+        data = tex2DSquareDatas;
+    } else {
+        if ( texture2D ) {
+            
+            size = sizeof(tex2DCubeDatas);
+            data = tex2DCubeDatas;
+            
+            BOOL elongated = (self.currentKey.elongatedConformalSwitch == Elongate_UD ||
+                              self.currentKey.elongatedConformalSwitch == Elongate_DD);
+            if ( elongated ) {
+                BOOL elongatedUD = (self.currentKey.elongatedConformalSwitch == Elongate_UD);
+                size = elongatedUD ? sizeof(tex2DElongatedUDCubeDatas) : sizeof(tex2DElongatedDDCubeDatas);
+                data = elongatedUD ? tex2DElongatedUDCubeDatas : tex2DElongatedDDCubeDatas;
+            }
+            
+        } else {
+            size = sizeof(texCubemapCubeDatas);
+            data = texCubemapCubeDatas;
+        }
+    }
     glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW);
     
     GLsizeiptr elementSize = square ? sizeof(squareIndices) : sizeof(texCubeIndices);
@@ -420,8 +542,6 @@ typedef void (^ReleaseBlock)(void);
     [self shouldExit:vertexShader releaseOldSource:releaseBlockDicts];
     /*----------------------------------------------------------> Release <---*/
 
-    BOOL texture2D = (self.currentKey.tex2DCubeMapSwitch == Texture2D);
-    
     NSString *vertexShaderFile = texture2D ? @"VYTex2DVertexShader.glsl" : @"VYTexCubemapVertexShader.glsl";
     NSString *vertexShaderString = [self getShaderStringWithFileName:vertexShaderFile];
     BOOL failured = [self compliedShader:vertexShader codeString:vertexShaderString];
@@ -457,7 +577,12 @@ typedef void (^ReleaseBlock)(void);
     GLuint positionAttributeIndex = 0;
     GLuint texCoordAttributeIndex = 1;
     glBindAttribLocation(programObject, positionAttributeIndex, "a_position");
-    glBindAttribLocation(programObject, texCoordAttributeIndex, "a_texCoord");
+    if ( texture2D ) {
+        glBindAttribLocation(programObject, texCoordAttributeIndex, "a_texCoord");
+    } else {
+        texCoordAttributeIndex = 2;
+        glBindAttribLocation(programObject, texCoordAttributeIndex, "a_normalCoord");
+    }
     
     failured = [self linkShaderWithProgramID:programObject];
     /*----------------------------------------------------------> Release <---*/
@@ -465,8 +590,8 @@ typedef void (^ReleaseBlock)(void);
     /*----------------------------------------------------------> Release <---*/
     
     //MARK: Bind Datas To GPU
-    const GLuint positionAttributeComCount = 3;
-    const GLuint texCoordAttributeComCount = 2;
+    GLuint positionAttributeComCount = 3;
+    GLuint texCoordAttributeComCount = 2;
     
     glEnableVertexAttribArray(positionAttributeIndex);
     glVertexAttribPointer(positionAttributeIndex,
@@ -476,11 +601,20 @@ typedef void (^ReleaseBlock)(void);
                           (const GLvoid *) offsetof(VYVertex, position));
     
     glEnableVertexAttribArray(texCoordAttributeIndex);
-    glVertexAttribPointer(texCoordAttributeIndex,
-                          texCoordAttributeComCount,
-                          GL_FLOAT, GL_FALSE,
-                          sizeof(VYVertex),
-                          (const GLvoid *) offsetof(VYVertex, texCoord));
+    if ( texture2D ) {
+        glVertexAttribPointer(texCoordAttributeIndex,
+                              texCoordAttributeComCount,
+                              GL_FLOAT, GL_FALSE,
+                              sizeof(VYVertex),
+                              (const GLvoid *) offsetof(VYVertex, texCoord));
+    } else {
+        texCoordAttributeComCount = 3;
+        glVertexAttribPointer(texCoordAttributeIndex,
+                              texCoordAttributeComCount,
+                              GL_FLOAT, GL_FALSE,
+                              sizeof(VYVertex),
+                              (const GLvoid *) offsetof(VYVertex, normalCoord));
+    }
     
     //MARK: Texture
     GLuint texture = 0;
@@ -565,10 +699,10 @@ typedef void (^ReleaseBlock)(void);
 //    rotateX += M_PI_4 * time;
     
     GLfloat rotateY = modelRtate.y;
-    rotateY += M_PI_2 * time;
+    rotateY += M_PI_4 * time;
     
     GLfloat rotateZ = modelRtate.z;
-    rotateZ += M_PI_2 * time;
+    rotateZ += M_PI * time;
     
     trans.modelTransform = VYSTTransformSetRotation(modelTrans, trans.RotationVec3Make(rotateX, rotateY, rotateZ));
     

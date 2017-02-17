@@ -69,7 +69,8 @@
                                     <constraint firstAttribute="height" constant="28" id="t7N-yg-SJv"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="长方图"/>
+                                    <segment title="长方图(UD)"/>
+                                    <segment title="长方图(DD)"/>
                                     <segment title="正方图"/>
                                 </segments>
                                 <color key="tintColor" red="0.8058890700340271" green="0.52974128723144531" blue="0.79237031936645508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -83,12 +84,12 @@
                                     <constraint firstAttribute="height" constant="28" id="PoL-vt-Mwp"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="图1"/>
-                                    <segment title="图2"/>
-                                    <segment title="图3"/>
-                                    <segment title="图4"/>
-                                    <segment title="图5"/>
-                                    <segment title="图6"/>
+                                    <segment title="512*512"/>
+                                    <segment title="128*128"/>
+                                    <segment title="S768*512"/>
+                                    <segment title="M768*512"/>
+                                    <segment title="Map01"/>
+                                    <segment title="Map02"/>
                                 </segments>
                                 <color key="tintColor" red="0.8058890700340271" green="0.52974128723144531" blue="0.79237031936645508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
