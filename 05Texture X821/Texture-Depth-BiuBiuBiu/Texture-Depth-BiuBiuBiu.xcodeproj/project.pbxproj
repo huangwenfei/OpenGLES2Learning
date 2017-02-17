@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2324A93B1E571290000B93A8 /* VYDisplayLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = 2324A91C1E571290000B93A8 /* VYDisplayLoop.m */; };
+		2324A93C1E571290000B93A8 /* VYLoadTextureImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2324A91E1E571290000B93A8 /* VYLoadTextureImage.m */; };
+		2324A93D1E571290000B93A8 /* VYTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 2324A9201E571290000B93A8 /* VYTransforms.m */; };
+		2324A93E1E571290000B93A8 /* VYTextureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2324A9261E571290000B93A8 /* VYTextureView.m */; };
+		2324A93F1E571290000B93A8 /* VYTex2DFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2324A9281E571290000B93A8 /* VYTex2DFragmentShader.glsl */; };
+		2324A9401E571290000B93A8 /* VYTex2DVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2324A9291E571290000B93A8 /* VYTex2DVertexShader.glsl */; };
+		2324A9411E571290000B93A8 /* VYTexCubemapFragmentShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2324A92A1E571290000B93A8 /* VYTexCubemapFragmentShader.glsl */; };
+		2324A9421E571290000B93A8 /* VYTexCubemapVertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2324A92B1E571290000B93A8 /* VYTexCubemapVertexShader.glsl */; };
+		2324A9431E571290000B93A8 /* 128_128.png in Resources */ = {isa = PBXBuildFile; fileRef = 2324A92D1E571290000B93A8 /* 128_128.png */; };
+		2324A9441E571290000B93A8 /* HDR湖泊.png in Resources */ = {isa = PBXBuildFile; fileRef = 2324A92F1E571290000B93A8 /* HDR湖泊.png */; };
+		2324A9451E571290000B93A8 /* L_768_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 2324A9301E571290000B93A8 /* L_768_512.png */; };
+		2324A9461E571290000B93A8 /* Rubik's cube.png in Resources */ = {isa = PBXBuildFile; fileRef = 2324A9311E571290000B93A8 /* Rubik's cube.png */; };
+		2324A9471E571290000B93A8 /* 512_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 2324A9321E571290000B93A8 /* 512_512.png */; };
+		2324A9481E571290000B93A8 /* 512_512_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 2324A9341E571290000B93A8 /* 512_512_01.png */; };
+		2324A9491E571290000B93A8 /* 512_512_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 2324A9351E571290000B93A8 /* 512_512_02.png */; };
+		2324A94A1E571290000B93A8 /* 512_512_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 2324A9361E571290000B93A8 /* 512_512_03.png */; };
+		2324A94B1E571290000B93A8 /* 512_512_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 2324A9371E571290000B93A8 /* 512_512_04.png */; };
+		2324A94C1E571290000B93A8 /* 512_512_05.png in Resources */ = {isa = PBXBuildFile; fileRef = 2324A9381E571290000B93A8 /* 512_512_05.png */; };
+		2324A94D1E571290000B93A8 /* 512_512_06.png in Resources */ = {isa = PBXBuildFile; fileRef = 2324A9391E571290000B93A8 /* 512_512_06.png */; };
+		2324A9531E5712BE000B93A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2324A9521E5712BE000B93A8 /* ViewController.m */; };
+		23DEBAC51E56F9F4007BD664 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DEBAC41E56F9F4007BD664 /* main.m */; };
+		23DEBAC81E56F9F4007BD664 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DEBAC71E56F9F4007BD664 /* AppDelegate.m */; };
+		23DEBACE1E56F9F4007BD664 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DEBACC1E56F9F4007BD664 /* Main.storyboard */; };
+		23DEBAD01E56F9F4007BD664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23DEBACF1E56F9F4007BD664 /* Assets.xcassets */; };
+		23DEBAD31E56F9F4007BD664 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23DEBAD11E56F9F4007BD664 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2324A91B1E571290000B93A8 /* VYDisplayLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VYDisplayLoop.h; sourceTree = "<group>"; };
+		2324A91C1E571290000B93A8 /* VYDisplayLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VYDisplayLoop.m; sourceTree = "<group>"; };
+		2324A91D1E571290000B93A8 /* VYLoadTextureImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VYLoadTextureImage.h; sourceTree = "<group>"; };
+		2324A91E1E571290000B93A8 /* VYLoadTextureImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VYLoadTextureImage.m; sourceTree = "<group>"; };
+		2324A91F1E571290000B93A8 /* VYTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VYTransforms.h; sourceTree = "<group>"; };
+		2324A9201E571290000B93A8 /* VYTransforms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VYTransforms.m; sourceTree = "<group>"; };
+		2324A9221E571290000B93A8 /* TextureDatas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureDatas.h; sourceTree = "<group>"; };
+		2324A9251E571290000B93A8 /* VYTextureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VYTextureView.h; sourceTree = "<group>"; };
+		2324A9261E571290000B93A8 /* VYTextureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VYTextureView.m; sourceTree = "<group>"; };
+		2324A9281E571290000B93A8 /* VYTex2DFragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VYTex2DFragmentShader.glsl; sourceTree = "<group>"; };
+		2324A9291E571290000B93A8 /* VYTex2DVertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VYTex2DVertexShader.glsl; sourceTree = "<group>"; };
+		2324A92A1E571290000B93A8 /* VYTexCubemapFragmentShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VYTexCubemapFragmentShader.glsl; sourceTree = "<group>"; };
+		2324A92B1E571290000B93A8 /* VYTexCubemapVertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VYTexCubemapVertexShader.glsl; sourceTree = "<group>"; };
+		2324A92D1E571290000B93A8 /* 128_128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 128_128.png; sourceTree = "<group>"; };
+		2324A92F1E571290000B93A8 /* HDR湖泊.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HDR湖泊.png"; sourceTree = "<group>"; };
+		2324A9301E571290000B93A8 /* L_768_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = L_768_512.png; sourceTree = "<group>"; };
+		2324A9311E571290000B93A8 /* Rubik's cube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rubik's cube.png"; sourceTree = "<group>"; };
+		2324A9321E571290000B93A8 /* 512_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512.png; sourceTree = "<group>"; };
+		2324A9341E571290000B93A8 /* 512_512_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512_01.png; sourceTree = "<group>"; };
+		2324A9351E571290000B93A8 /* 512_512_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512_02.png; sourceTree = "<group>"; };
+		2324A9361E571290000B93A8 /* 512_512_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512_03.png; sourceTree = "<group>"; };
+		2324A9371E571290000B93A8 /* 512_512_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512_04.png; sourceTree = "<group>"; };
+		2324A9381E571290000B93A8 /* 512_512_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512_05.png; sourceTree = "<group>"; };
+		2324A9391E571290000B93A8 /* 512_512_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 512_512_06.png; sourceTree = "<group>"; };
+		2324A9511E5712BE000B93A8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2324A9521E5712BE000B93A8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		23DEBAC01E56F9F4007BD664 /* Texture-Depth-BiuBiuBiu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Texture-Depth-BiuBiuBiu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23DEBAC41E56F9F4007BD664 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		23DEBAC61E56F9F4007BD664 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		23DEBAC71E56F9F4007BD664 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		23DEBACD1E56F9F4007BD664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		23DEBACF1E56F9F4007BD664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23DEBAD21E56F9F4007BD664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23DEBAD41E56F9F4007BD664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23DEBABD1E56F9F4007BD664 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2324A9191E571290000B93A8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2324A91A1E571290000B93A8 /* Commom */,
+				2324A9211E571290000B93A8 /* Datas */,
+				2324A92C1E571290000B93A8 /* TextureSources */,
+				2324A9271E571290000B93A8 /* Shader */,
+				2324A9241E571290000B93A8 /* MainClass */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2324A91A1E571290000B93A8 /* Commom */ = {
+			isa = PBXGroup;
+			children = (
+				2324A91B1E571290000B93A8 /* VYDisplayLoop.h */,
+				2324A91C1E571290000B93A8 /* VYDisplayLoop.m */,
+				2324A91D1E571290000B93A8 /* VYLoadTextureImage.h */,
+				2324A91E1E571290000B93A8 /* VYLoadTextureImage.m */,
+				2324A91F1E571290000B93A8 /* VYTransforms.h */,
+				2324A9201E571290000B93A8 /* VYTransforms.m */,
+			);
+			path = Commom;
+			sourceTree = "<group>";
+		};
+		2324A9211E571290000B93A8 /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				2324A9221E571290000B93A8 /* TextureDatas.h */,
+			);
+			path = Datas;
+			sourceTree = "<group>";
+		};
+		2324A9241E571290000B93A8 /* MainClass */ = {
+			isa = PBXGroup;
+			children = (
+				2324A9251E571290000B93A8 /* VYTextureView.h */,
+				2324A9261E571290000B93A8 /* VYTextureView.m */,
+			);
+			path = MainClass;
+			sourceTree = "<group>";
+		};
+		2324A9271E571290000B93A8 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				2324A9281E571290000B93A8 /* VYTex2DFragmentShader.glsl */,
+				2324A9291E571290000B93A8 /* VYTex2DVertexShader.glsl */,
+				2324A92A1E571290000B93A8 /* VYTexCubemapFragmentShader.glsl */,
+				2324A92B1E571290000B93A8 /* VYTexCubemapVertexShader.glsl */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		2324A92C1E571290000B93A8 /* TextureSources */ = {
+			isa = PBXGroup;
+			children = (
+				2324A92D1E571290000B93A8 /* 128_128.png */,
+				2324A92E1E571290000B93A8 /* 2DCubeElong */,
+				2324A9321E571290000B93A8 /* 512_512.png */,
+				2324A9331E571290000B93A8 /* Cubemap */,
+			);
+			path = TextureSources;
+			sourceTree = "<group>";
+		};
+		2324A92E1E571290000B93A8 /* 2DCubeElong */ = {
+			isa = PBXGroup;
+			children = (
+				2324A92F1E571290000B93A8 /* HDR湖泊.png */,
+				2324A9301E571290000B93A8 /* L_768_512.png */,
+				2324A9311E571290000B93A8 /* Rubik's cube.png */,
+			);
+			path = 2DCubeElong;
+			sourceTree = "<group>";
+		};
+		2324A9331E571290000B93A8 /* Cubemap */ = {
+			isa = PBXGroup;
+			children = (
+				2324A9341E571290000B93A8 /* 512_512_01.png */,
+				2324A9351E571290000B93A8 /* 512_512_02.png */,
+				2324A9361E571290000B93A8 /* 512_512_03.png */,
+				2324A9371E571290000B93A8 /* 512_512_04.png */,
+				2324A9381E571290000B93A8 /* 512_512_05.png */,
+				2324A9391E571290000B93A8 /* 512_512_06.png */,
+				2324A93A1E571290000B93A8 /* HDR */,
+			);
+			path = Cubemap;
+			sourceTree = "<group>";
+		};
+		2324A93A1E571290000B93A8 /* HDR */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HDR;
+			sourceTree = "<group>";
+		};
+		23DEBAB71E56F9F4007BD664 = {
+			isa = PBXGroup;
+			children = (
+				23DEBAC21E56F9F4007BD664 /* Texture-Depth-BiuBiuBiu */,
+				23DEBAC11E56F9F4007BD664 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23DEBAC11E56F9F4007BD664 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23DEBAC01E56F9F4007BD664 /* Texture-Depth-BiuBiuBiu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23DEBAC21E56F9F4007BD664 /* Texture-Depth-BiuBiuBiu */ = {
+			isa = PBXGroup;
+			children = (
+				2324A9191E571290000B93A8 /* Classes */,
+				2324A9511E5712BE000B93A8 /* ViewController.h */,
+				2324A9521E5712BE000B93A8 /* ViewController.m */,
+				23DEBAC31E56F9F4007BD664 /* Supporting Files */,
+			);
+			path = "Texture-Depth-BiuBiuBiu";
+			sourceTree = "<group>";
+		};
+		23DEBAC31E56F9F4007BD664 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23DEBAC61E56F9F4007BD664 /* AppDelegate.h */,
+				23DEBAC71E56F9F4007BD664 /* AppDelegate.m */,
+				23DEBACC1E56F9F4007BD664 /* Main.storyboard */,
+				23DEBACF1E56F9F4007BD664 /* Assets.xcassets */,
+				23DEBAD11E56F9F4007BD664 /* LaunchScreen.storyboard */,
+				23DEBAD41E56F9F4007BD664 /* Info.plist */,
+				23DEBAC41E56F9F4007BD664 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23DEBABF1E56F9F4007BD664 /* Texture-Depth-BiuBiuBiu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23DEBAD71E56F9F4007BD664 /* Build configuration list for PBXNativeTarget "Texture-Depth-BiuBiuBiu" */;
+			buildPhases = (
+				23DEBABC1E56F9F4007BD664 /* Sources */,
+				23DEBABD1E56F9F4007BD664 /* Frameworks */,
+				23DEBABE1E56F9F4007BD664 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Texture-Depth-BiuBiuBiu";
+			productName = "Texture-Depth-BiuBiuBiu";
+			productReference = 23DEBAC01E56F9F4007BD664 /* Texture-Depth-BiuBiuBiu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23DEBAB81E56F9F4007BD664 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Windy;
+				TargetAttributes = {
+					23DEBABF1E56F9F4007BD664 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 23DEBABB1E56F9F4007BD664 /* Build configuration list for PBXProject "Texture-Depth-BiuBiuBiu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23DEBAB71E56F9F4007BD664;
+			productRefGroup = 23DEBAC11E56F9F4007BD664 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23DEBABF1E56F9F4007BD664 /* Texture-Depth-BiuBiuBiu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23DEBABE1E56F9F4007BD664 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2324A94A1E571290000B93A8 /* 512_512_03.png in Resources */,
+				2324A9401E571290000B93A8 /* VYTex2DVertexShader.glsl in Resources */,
+				2324A9491E571290000B93A8 /* 512_512_02.png in Resources */,
+				2324A94C1E571290000B93A8 /* 512_512_05.png in Resources */,
+				2324A94B1E571290000B93A8 /* 512_512_04.png in Resources */,
+				23DEBAD31E56F9F4007BD664 /* LaunchScreen.storyboard in Resources */,
+				23DEBAD01E56F9F4007BD664 /* Assets.xcassets in Resources */,
+				2324A9481E571290000B93A8 /* 512_512_01.png in Resources */,
+				2324A9461E571290000B93A8 /* Rubik's cube.png in Resources */,
+				2324A9431E571290000B93A8 /* 128_128.png in Resources */,
+				2324A9441E571290000B93A8 /* HDR湖泊.png in Resources */,
+				2324A9451E571290000B93A8 /* L_768_512.png in Resources */,
+				23DEBACE1E56F9F4007BD664 /* Main.storyboard in Resources */,
+				2324A93F1E571290000B93A8 /* VYTex2DFragmentShader.glsl in Resources */,
+				2324A9471E571290000B93A8 /* 512_512.png in Resources */,
+				2324A94D1E571290000B93A8 /* 512_512_06.png in Resources */,
+				2324A9421E571290000B93A8 /* VYTexCubemapVertexShader.glsl in Resources */,
+				2324A9411E571290000B93A8 /* VYTexCubemapFragmentShader.glsl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23DEBABC1E56F9F4007BD664 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2324A9531E5712BE000B93A8 /* ViewController.m in Sources */,
+				2324A93D1E571290000B93A8 /* VYTransforms.m in Sources */,
+				2324A93E1E571290000B93A8 /* VYTextureView.m in Sources */,
+				23DEBAC81E56F9F4007BD664 /* AppDelegate.m in Sources */,
+				23DEBAC51E56F9F4007BD664 /* main.m in Sources */,
+				2324A93C1E571290000B93A8 /* VYLoadTextureImage.m in Sources */,
+				2324A93B1E571290000B93A8 /* VYDisplayLoop.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		23DEBACC1E56F9F4007BD664 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23DEBACD1E56F9F4007BD664 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		23DEBAD11E56F9F4007BD664 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23DEBAD21E56F9F4007BD664 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23DEBAD51E56F9F4007BD664 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		23DEBAD61E56F9F4007BD664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23DEBAD81E56F9F4007BD664 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Texture-Depth-BiuBiuBiu/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windy.Texture-Depth-BiuBiuBiu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		23DEBAD91E56F9F4007BD664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Texture-Depth-BiuBiuBiu/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.windy.Texture-Depth-BiuBiuBiu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23DEBABB1E56F9F4007BD664 /* Build configuration list for PBXProject "Texture-Depth-BiuBiuBiu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23DEBAD51E56F9F4007BD664 /* Debug */,
+				23DEBAD61E56F9F4007BD664 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23DEBAD71E56F9F4007BD664 /* Build configuration list for PBXNativeTarget "Texture-Depth-BiuBiuBiu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23DEBAD81E56F9F4007BD664 /* Debug */,
+				23DEBAD91E56F9F4007BD664 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23DEBAB81E56F9F4007BD664 /* Project object */;
+}
