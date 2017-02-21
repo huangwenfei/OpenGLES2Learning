@@ -39,13 +39,13 @@ typedef NS_ENUM(int, VYElongateConformalKey) {
 
 typedef NS_ENUM(int, VYImageSourceKey) {
     IS_UnKnown = -1,
-    ImageSource_128_128 = 0,
-    ImageSource_512_512,
-    ImageSource_Single_768_512_01,
-    ImageSource_Single_768_512_02,
-    ImageSource_Mutil_768_512_01,
-    ImageSource_Cubemap_512_512s,
-    ImageSource_Cubemap_HDR01,
+    ImageSource_512_512 = 0,        // Conformal
+    ImageSource_128_128,            // Conformal
+    ImageSource_Single_768_512_01,  // Elong_UD
+    ImageSource_Single_768_512_02,  // Elong_UD
+    ImageSource_Mutil_768_512_01,   // Elong_DD
+    ImageSource_Cubemap_512_512s,   // Cubemap
+    ImageSource_Cubemap_HDR01,      // Cubemap HDR
 };
 
 @interface VYSwitchKey : NSObject

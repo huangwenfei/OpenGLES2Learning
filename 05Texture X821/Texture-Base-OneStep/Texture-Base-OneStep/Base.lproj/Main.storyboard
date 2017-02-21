@@ -86,10 +86,6 @@
                                 <segments>
                                     <segment title="512*512"/>
                                     <segment title="128*128"/>
-                                    <segment title="S768*512"/>
-                                    <segment title="M768*512"/>
-                                    <segment title="Map01"/>
-                                    <segment title="Map02"/>
                                 </segments>
                                 <color key="tintColor" red="0.8058890700340271" green="0.52974128723144531" blue="0.79237031936645508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>

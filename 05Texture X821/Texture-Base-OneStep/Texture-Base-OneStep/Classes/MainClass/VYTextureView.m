@@ -27,8 +27,8 @@
         self.squareCubeSwitch           = Square;
         self.tex2DCubeMapSwitch         = Texture2D;
         self.pixelsImageSwitch          = Pixel;
-        self.elongatedConformalSwitch   = EC_UnKnown;
-        self.imageSourceSwitch          = IS_UnKnown;
+        self.elongatedConformalSwitch   = Conformal;
+        self.imageSourceSwitch          = ImageSource_512_512;
     }
     
     return self;
@@ -270,16 +270,15 @@
             
         } else {
             
-            NSArray<UIImage *> *imgs = nil;
+            NSArray<UIImage *> *imgs = @[[UIImage imageNamed:@"512_512_01"],
+                                         [UIImage imageNamed:@"512_512_02"],
+                                         [UIImage imageNamed:@"512_512_03"],
+                                         [UIImage imageNamed:@"512_512_04"],
+                                         [UIImage imageNamed:@"512_512_05"],
+                                         [UIImage imageNamed:@"512_512_06"]];
             
             switch ( self.currentKey.imageSourceSwitch ) {
                 case ImageSource_Cubemap_512_512s:
-                    imgs = @[[UIImage imageNamed:@"512_512_01"],
-                             [UIImage imageNamed:@"512_512_02"],
-                             [UIImage imageNamed:@"512_512_03"],
-                             [UIImage imageNamed:@"512_512_04"],
-                             [UIImage imageNamed:@"512_512_05"],
-                             [UIImage imageNamed:@"512_512_06"]];
                     break;
                     
                 case ImageSource_Cubemap_HDR01:
