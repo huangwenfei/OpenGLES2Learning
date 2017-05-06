@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vgL-sA-Gft">
+                                <rect key="frame" x="8" y="499" width="359" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="CeU-nM-5O8"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Square"/>
+                                    <segment title="Cube"/>
+                                </segments>
+                                <color key="tintColor" red="0.80772128807106602" green="0.52820485178877374" blue="0.79199719323480222" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="squareCubeSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="8VN-Cl-oap"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8V2-Nd-mxd">
+                                <rect key="frame" x="8" y="532" width="359" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="gk4-2y-d0a"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Texture2D"/>
+                                    <segment title="TextureCubeMap"/>
+                                </segments>
+                                <color key="tintColor" red="0.8058890700340271" green="0.52974128723144531" blue="0.79237031936645508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="tex2DCubeMapSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ye4-iu-PHH"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="97I-zN-abj">
+                                <rect key="frame" x="8" y="565" width="359" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Gq6-ya-HC8"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Pixels"/>
+                                    <segment title="Image"/>
+                                </segments>
+                                <color key="tintColor" red="0.8058890700340271" green="0.52974128723144531" blue="0.79237031936645508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="pixelsImageSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="gdz-P3-MME"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WWv-Hx-Zoo">
+                                <rect key="frame" x="8" y="598" width="359" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="t7N-yg-SJv"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="长方图(UD)"/>
+                                    <segment title="长方图(DD)"/>
+                                    <segment title="正方图"/>
+                                </segments>
+                                <color key="tintColor" red="0.8058890700340271" green="0.52974128723144531" blue="0.79237031936645508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="elongatedConformalSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="N9b-uT-fkO"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NNa-Sb-Zhu">
+                                <rect key="frame" x="8" y="631" width="359" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="PoL-vt-Mwp"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="512*512"/>
+                                    <segment title="128*128"/>
+                                </segments>
+                                <color key="tintColor" red="0.8058890700340271" green="0.52974128723144531" blue="0.79237031936645508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="imageSourceSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="DTy-qL-46j"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WWv-Hx-Zoo" firstAttribute="top" secondItem="97I-zN-abj" secondAttribute="bottom" constant="5" id="04U-mY-DRb"/>
+                            <constraint firstItem="97I-zN-abj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="1Fe-Ql-oE7"/>
+                            <constraint firstItem="vgL-sA-Gft" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="DBL-uQ-I5h"/>
+                            <constraint firstItem="NNa-Sb-Zhu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="F3k-aC-7iv"/>
+                            <constraint firstItem="WWv-Hx-Zoo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="FGW-ZR-y9c"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NNa-Sb-Zhu" secondAttribute="bottom" constant="8" id="FKG-3I-Dxe"/>
+                            <constraint firstItem="8V2-Nd-mxd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="Frl-Ne-IMi"/>
+                            <constraint firstItem="97I-zN-abj" firstAttribute="top" secondItem="8V2-Nd-mxd" secondAttribute="bottom" constant="5" id="R0Z-td-dCD"/>
+                            <constraint firstItem="NNa-Sb-Zhu" firstAttribute="top" secondItem="WWv-Hx-Zoo" secondAttribute="bottom" constant="5" id="TPo-ix-hTQ"/>
+                            <constraint firstAttribute="trailing" secondItem="NNa-Sb-Zhu" secondAttribute="trailing" constant="8" id="Vtz-Pi-tKJ"/>
+                            <constraint firstItem="8V2-Nd-mxd" firstAttribute="top" secondItem="vgL-sA-Gft" secondAttribute="bottom" constant="5" id="Xbk-Cf-GHZ"/>
+                            <constraint firstAttribute="trailing" secondItem="97I-zN-abj" secondAttribute="trailing" constant="8" id="fZ1-q1-jKR"/>
+                            <constraint firstAttribute="trailing" secondItem="WWv-Hx-Zoo" secondAttribute="trailing" constant="8" id="sfI-JL-fs1"/>
+                            <constraint firstAttribute="trailing" secondItem="vgL-sA-Gft" secondAttribute="trailing" constant="8" id="tXa-zV-kX5"/>
+                            <constraint firstAttribute="trailing" secondItem="8V2-Nd-mxd" secondAttribute="trailing" constant="8" id="wTI-yh-9cB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="elongated_Conformal_SegCon" destination="WWv-Hx-Zoo" id="nX9-pL-Gbx"/>
+                        <outlet property="imageSource_SegCon" destination="NNa-Sb-Zhu" id="WSM-Ly-fPZ"/>
+                        <outlet property="pixels_Image_SegCon" destination="97I-zN-abj" id="Cik-kX-0Co"/>
+                        <outlet property="square_Cube_SegCon" destination="vgL-sA-Gft" id="BRx-p1-ao4"/>
+                        <outlet property="tex2D_CubeMap_SegCon" destination="8V2-Nd-mxd" id="BJL-n5-e2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>

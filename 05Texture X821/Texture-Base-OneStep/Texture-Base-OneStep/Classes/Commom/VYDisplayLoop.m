@@ -1,48 +1,40 @@
 //
-//  VFRedisplay.m
-//  DrawCube
+//  VYDisplayLoop.m
+//  Texture-Base-OneStep
 //
-//  Created by windy on 16/12/23.
-//  Copyright © 2016年 windy. All rights reserved.
+//  Created by Windy on 2017/2/15.
+//  Copyright © 2017年 Windy. All rights reserved.
 //
 
-#import "VFRedisplay.h"
+#import "VYDisplayLoop.h"
 
 @import QuartzCore;
 
-static const NSUInteger kTotalSeconds = 60;
-static const NSUInteger kLeastSeconds = 1;
-
-static const CGFloat kDefaultUpdateSeconds = 0.2;
 static const NSUInteger kDefaultPreferredFramesPerSecond = 30;
 static const BOOL kDefaultDisplayPause = NO;
 
-// - (void)selector:(CADisplayLink *)sender;
-
-@interface VFRedisplay ()
+@interface VYDisplayLoop ()
 
 @property (strong, nonatomic) CADisplayLink *displayLink;
 
 @property (assign, nonatomic) BOOL displayPause;
 
 /*
- Time interval since properties.
+ * 链接更新的各个时间间隔
  */
+@property (nonatomic, assign) BOOL resume;
 @property (nonatomic, assign) NSTimeInterval timeSinceFirstResume;
 @property (nonatomic, assign) NSTimeInterval timeSinceLastResume;
 @property (nonatomic, assign) NSTimeInterval timeSinceLastUpdate;
-@property (nonatomic, assign) NSTimeInterval timeSinceLastDraw;
 
 @end
 
-@implementation VFRedisplay
+@implementation VYDisplayLoop
 
 #pragma mark - Getter / Setter
 
-- (NSInteger)framesPerSecond {
-    
-    return kTotalSeconds / self.displayLink.frameInterval;
-    
+- (NSTimeInterval)frameRates {
+    return self.displayLink.duration;
 }
 
 @dynamic displayPause;
@@ -54,22 +46,20 @@ static const BOOL kDefaultDisplayPause = NO;
 }
 
 - (BOOL)displayPause {
-
+    
     return self.displayLink.paused;
     
 }
 
 #pragma mark - Init
 
-- (instancetype)initWithUpdateTimes:(NSTimeInterval)updateContentTimes
-           preferredFramesPerSecond:(NSInteger)preferredFramesPerSecond {
+- (instancetype)initWithPreferredFramesPerSecond:(NSInteger)preferredFramesPerSecond {
     
     if (self = [super init]) {
         
         self.preferredFramesPerSecond   = preferredFramesPerSecond;
         self.displayPause               = kDefaultDisplayPause;
-        self.updateContentTimes         = updateContentTimes;
-        
+
     }
     
     return self;
@@ -92,7 +82,6 @@ static const BOOL kDefaultDisplayPause = NO;
     
     self.preferredFramesPerSecond = kDefaultPreferredFramesPerSecond;
     self.displayPause = kDefaultDisplayPause;
-    self.updateContentTimes = kDefaultUpdateSeconds;
     
 }
 
@@ -105,13 +94,14 @@ static const BOOL kDefaultDisplayPause = NO;
     self.displayLink = [CADisplayLink displayLinkWithTarget:self
                                                    selector:@selector(displayContents:)];
     
-    self.displayLink.frameInterval = (NSUInteger)MAX(kLeastSeconds,
-                                                     (kTotalSeconds / self.preferredFramesPerSecond));
+    self.displayLink.preferredFramesPerSecond = self.preferredFramesPerSecond;
     
     [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop]
                            forMode:NSDefaultRunLoopMode];
     
     self.displayPause = kDefaultDisplayPause;
+    
+    self.resume = YES;
     
 }
 
@@ -121,13 +111,14 @@ static const BOOL kDefaultDisplayPause = NO;
     
 }
 
-- (void)endUpdate {
+- (void)stopUpdate {
     
+    self.timeSinceLastResume = self.displayLink.timestamp;
     self.displayPause = YES;
+    
     [self.displayLink invalidate];
     [self.displayLink removeFromRunLoop:[NSRunLoop currentRunLoop]
                                 forMode:NSDefaultRunLoopMode];
-    
     
 }
 
@@ -140,15 +131,15 @@ static const BOOL kDefaultDisplayPause = NO;
     }
     self.timeSinceLastUpdate  = newTime - self.timeSinceFirstResume;
     self.timeSinceFirstResume = newTime;
-
-    if ([self.delegate respondsToSelector:@selector(updateContentsWithTimes:)]) {
+    
+    if ([self.delegate respondsToSelector:@selector(updateContents)]) {
         
-        NSLog(@"duration: %f; timestamp: %f; LastUpdate: %f; targetTimestamp: %f",
-              self.displayLink.duration,self.displayLink.timestamp,
-              self.timeSinceLastUpdate, self.displayLink.targetTimestamp);
-        NSLog(@"----------------------------------------------------------------------------------------");
+//        NSLog(@"duration: %f; timestamp: %f; rate: %f; LastUpdate: %f",
+//              self.displayLink.duration,self.displayLink.timestamp, self.frameRates,
+//              self.timeSinceLastUpdate);
+//        NSLog(@"----------------------------------------------------------------------------------------");
         
-        [self.delegate updateContentsWithTimes:self.updateContentTimes];
+        [self.delegate updateContents];
         
     }
     
